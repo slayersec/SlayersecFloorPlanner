@@ -1,18 +1,7 @@
-<?php
-$servername = "sql5.freemysqlhosting.net:3306";
-$username = "sql5391725";
-$password = "DzNMQ6xzw3";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-?> 
+{% block content %}
     <form method="POST">
+      {% csrf_token %}
+      {{form}}
     </form>
 
 <!DOCTYPE html>
@@ -94,16 +83,20 @@ span.psw {
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit">Login</button>
+    
+
     <label> 
     </label>
   </div>
 
   <div class="container" style="background-color:#F1F1F1">
 
- <a href="register.php">Don't Have an Account? Register Here</a>
+ <a href="/register">Don't Have an Account? Register Here</a>
+ 
   </div>
 </form>
 
 </body>
 </html>
 
+{% endblock %}
