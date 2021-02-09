@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SlayersecFloorManager.urls'
+ROOT_URLCONF = 'mySite.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SlayersecFloorManager.wsgi.application'
+WSGI_APPLICATION = 'mySite.wsgi.application'
 
 
 # Database
