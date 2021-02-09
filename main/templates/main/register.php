@@ -104,7 +104,7 @@ button {
 
     <button type="submit" class="registerbtn">Register</button>
     
-     <a href="login.htm">Already have an account?</a>
+     <a href="login.php">Already have an account?</a>
   </div>
   
   </div>
