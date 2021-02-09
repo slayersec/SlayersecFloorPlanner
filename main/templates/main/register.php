@@ -1,3 +1,9 @@
+{% block content %}
+    <form method="POST">
+      {% csrf_token %}
+      {{form}}
+    </form>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,11 +106,10 @@ button {
      <button type="submit">Login</button>
   </div>
   
-  
-  
- 
   </div>
 </form>
 
 </body>
 </html>
+
+{% endblock %}
