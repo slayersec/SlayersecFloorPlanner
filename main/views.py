@@ -11,8 +11,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 def login(request):
    form = UserCreationForm
-   return render(request, "main/login.php", context={"form":form}) 
+   return render(request, "main/login.php", context={"formLogin":form}) 
 
 def register(request):
    form = UserCreationForm
-   return render(request, "main/register.php", context={"form":form})  
+   return render(request, "main/register.php", context={"formRegister":form})  
