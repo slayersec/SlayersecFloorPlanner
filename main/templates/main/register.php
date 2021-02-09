@@ -1,3 +1,4 @@
+{% extends "main/login.php" %}
 {% block content %}
     <form method="POST">
       {% csrf_token %}
