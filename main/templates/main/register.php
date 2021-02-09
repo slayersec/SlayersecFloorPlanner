@@ -1,3 +1,10 @@
+{% extends "main/login.php" %}
+{% block content %}
+    <form method="POST">
+      {% csrf_token %}
+      {{form}}
+    </form>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,11 +107,10 @@ button {
      <a href="login.htm">Already have an account?</a>
   </div>
   
-  
-  
- 
   </div>
 </form>
 
 </body>
 </html>
+
+{% endblock %}
