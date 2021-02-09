@@ -104,7 +104,7 @@ button {
 
     <button type="submit" class="registerbtn">Register</button>
     
-     <button type="submit">Login</button>
+    <a href="/login">Already have an account?</a>
   </div>
   
   </div>
