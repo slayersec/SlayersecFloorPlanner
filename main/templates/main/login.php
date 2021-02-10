@@ -81,7 +81,7 @@ span.psw {
 
 <form action="homepage.php" method="post">
   <div class="imgcontainer">
-    <img src="xampp/img/img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
