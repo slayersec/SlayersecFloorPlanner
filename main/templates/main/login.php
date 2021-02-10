@@ -1,8 +1,17 @@
-{% block content %}
-    <form method="POST">
-      {% csrf_token %}
-      {{form}}
-    </form>
+<?php
+$servername = "sql5.freemysqlhosting.net:3306";
+$username = "sql5391725";
+$password = "DzNMQ6xzw3";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -70,9 +79,9 @@ span.psw {
 
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="/action_page.php" method="post">
+<form action="homepage.php" method="post">
   <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="xampp/img/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
@@ -91,12 +100,10 @@ span.psw {
 
   <div class="container" style="background-color:#F1F1F1">
 
- <a href="/register">Don't Have an Account? Register Here</a>
+ <a href="/register.php">Don't Have an Account? Register Here</a>
  
   </div>
 </form>
 
 </body>
 </html>
-
-{% endblock %}

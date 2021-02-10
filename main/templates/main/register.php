@@ -1,10 +1,3 @@
-{% extends "main/login.php" %}
-{% block content %}
-    <form method="POST">
-      {% csrf_token %}
-      {{form}}
-    </form>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,7 +74,7 @@ button {
 </head>
 <body>
 
-<form action="/action_page.php">
+<form action="/homepage.php">
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>
@@ -104,7 +97,7 @@ button {
 
     <button type="submit" class="registerbtn">Register</button>
     
-    <a href="/login">Already have an account?</a>
+    <a href="/login.php">Already have an account?</a>
   </div>
   
   </div>
@@ -113,4 +106,3 @@ button {
 </body>
 </html>
 
-{% endblock %}

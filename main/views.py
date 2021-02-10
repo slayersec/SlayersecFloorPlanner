@@ -16,3 +16,7 @@ def login(request):
 def register(request):
    form = UserCreationForm
    return render(request, "main/register.php", context={"formRegister":form})  
+
+def homepage(request):
+   form = UserCreationForm
+   return render(request, "main/homepage.php", context={"formHomepage":form})  
