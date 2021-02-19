@@ -1,16 +1,29 @@
 <?php
-$servername = "sql5.freemysqlhosting.net:3306";
-$username = "sql5391725";
-$password = "DzNMQ6xzw3";
+$servername = "localhost";
+$username = "testroot";
+$password = "toor";
+$dbname = "testslayersecdatabase";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+
+//Define command
+$sql  = "SELECT * FROM login_table" ;
+
+//Echo table output
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "id: " . $row["username"]. " - password: " . $row["password"]. " " . $row["employeeID"]. "<br>";
+  }
+}
 ?>
 
 <!DOCTYPE html>
