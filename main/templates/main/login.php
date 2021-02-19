@@ -1,17 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "testroot";
-$password = "toor";
-$dbname = "testslayersecdatabase";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
+include "config.php";
 
 //Define command
 $sql  = "SELECT * FROM login_table" ;
