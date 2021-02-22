@@ -1,18 +1,19 @@
 <?php
+session_start();
 include "config.php";
-
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: dashboard.php");
+    exit;
+}
 //Define command
 $sql  = "SELECT * FROM login_table" ;
 
 //Echo table output
 $result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "id: " . $row["username"]. " - password: " . $row["password"]. " " . $row["employeeID"]. "<br>";
-  }
-}
-?>
+
+?> 
+    <form method="POST">
+    </form>
 
 <!DOCTYPE html>
 <html>
@@ -78,11 +79,20 @@ span.psw {
 </head>
 <body>
 
+
+<?php
+      //Should be abc == 1... idk why it's giving a shit about this
+       if (isset($abc1))
+	   {
+		  echo "User or passwrod is incorrect <br><br>"; 
+	   }
+
+?>
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="homepage.php" method="post">
+<form action="/checkcred2.php" method="post">
   <div class="imgcontainer">
-    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="/img/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
@@ -93,18 +103,31 @@ span.psw {
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit">Login</button>
-    
-
     <label> 
     </label>
   </div>
 
+
+
+
+
+
+
+
+    <?php
+    $username = $password = "uname";
+    $username_err = $password_err = "psw";
+    ?>
+
+
+
+
   <div class="container" style="background-color:#F1F1F1">
 
- <a href="/register.php">Don't Have an Account? Register Here</a>
- 
-  </div>
+ <a href="/register">Don't Have an Account? Register Here</a>
+  </div> 
 </form>
 
 </body>
 </html>
+
