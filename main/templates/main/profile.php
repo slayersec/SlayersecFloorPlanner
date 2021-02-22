@@ -24,9 +24,12 @@ p.ex1 {
 <form action="/action_page.php">
   <div class="container">
     <h1><center> Profile </center> </h1>
-    <?php include "imageUpload.php";?>
     
-    <center>
+    <div align = "left">
+    <?php include "imageUpload.php";?>
+    </div>
+
+    <div align = "right">
     <p> 
     <label for="name"><b>Name</b></label> 
         <input type="text" placeholder="Name" name="name" id="name" required>
@@ -37,7 +40,7 @@ p.ex1 {
         <input type="text" placeholder="Enter Email" name="email" id="email" required>
         <br>
     </p>
-    
+
     <p> 
     <label for="Phone#"><b>Phone#</b></label>
         <input type="text" placeholder="Enter Phone#" name="Phone#" id="Phone#" required>
@@ -90,7 +93,7 @@ p.ex1 {
     <button type="submit" class="registerbtn">Save</button> <br>
     <a href="/homepage.php">Back To Hompage?</a>
 
-    </center>
+    </div>
 
 
 </body>

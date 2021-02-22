@@ -52,6 +52,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 
+<!-- #maps leads nowhere rn be aware it will be changed in next iteration -->
 <div class="bg-img">
   <div class="container">
     <div class="topnav"> 
@@ -64,8 +65,120 @@ body {font-family: Arial, Helvetica, sans-serif;}
  
 </div>
 
+<!-- This begins the about us profile cards section -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #8A6767;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  background-color: #4111;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #455859;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h3>About Slayersec</h3>
+  <p>Slayersec floor managment is the best floor managment around.</p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Dan</h2>
+        <p class="title">Database Master</p>
+        <p>123@email.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Mike</h2>
+        <p class="title">PHP HTML Genius</p>
+        <p>123@email.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Matthew</h2>
+        <p class="title">PHP HTML Wiz</p>
+        <p>123@email.com</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
 </body>
-<p>about us.</p>
-    <p> With a $5 correspondence course in ice cream-making from Penn State and  a $12,000 investment ($4,000 of it borrowed), Ben and Jerry open their first  ice cream scoop shop in a renovated gas station in Burlington, Vermont..</p>
     <body>
 </html>
