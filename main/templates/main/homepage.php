@@ -143,7 +143,7 @@ html {
 
 <div class="about-section">
   <h3>About Slayersec</h3>
-  <p>Slayersec floor managment is the best floor managment around.</p>
+  <p>Slayersec Floor Management is the best Floor Management System Around</p>
 </div>
 
 <div class="row">
