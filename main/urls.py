@@ -19,10 +19,16 @@ from . import views
 app_name = "main"
 
 urlpatterns = [
+    # main path is changed to view the profile. Original is: path("", views.login, name="login"),
     path("", views.login, name="login"),
     path("login", views.login, name="login"),
     path("register", views.register, name="register"),
-    path("homepage", views.homepage, name="homepage")
+    path("homepage", views.homepage, name="homepage"),
+    path("profile", views.profile, name="profile"),
+    path("imageUpload", views.imageUpload, name="imageUpload"),
+
+
+
 
 
 

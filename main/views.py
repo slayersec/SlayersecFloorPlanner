@@ -20,3 +20,13 @@ def register(request):
 def homepage(request):
    form = UserCreationForm
    return render(request, "main/homepage.php", context={"formHomepage":form})  
+
+# Profile and uploading an image are on the same form
+
+def profile(request):
+   form = UserCreationForm
+   return render(request, "main/profile.php", context={"formProfile":form})  
+
+def imageUpload(request):
+   form = UserCreationForm
+   return render(request, "main/imageUpload.php", context={"formProfile":form})
