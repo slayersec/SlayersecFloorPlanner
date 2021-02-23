@@ -26,6 +26,8 @@ urlpatterns = [
     path("homepage", views.homepage, name="homepage"),
     path("profile", views.profile, name="profile"),
     path("imageUpload", views.imageUpload, name="imageUpload"),
+    path("maps2D", views.maps2D, name="maps2D"),
+
 
 
 

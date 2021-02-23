@@ -78,19 +78,20 @@ button {
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>
+    
+  <label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
 
-<label for="Phone#"><b>Phone#</b></label>
+  <label for="Phone#"><b>Phone#</b></label>
     <input type="text" placeholder="Enter Phone#" name="Phone#" id="Phone#" required>
     
   
   <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-    <label for="psw"><b>Password</b></label>
+  <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
 
 

@@ -30,3 +30,7 @@ def profile(request):
 def imageUpload(request):
    form = UserCreationForm
    return render(request, "main/imageUpload.php", context={"formProfile":form})
+
+def maps2D(request):
+   form = UserCreationForm
+   return render(request, "main/maps2D.php", context={"formMaps":form})

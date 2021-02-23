@@ -55,9 +55,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!-- #maps leads nowhere rn be aware it will be changed in next iteration -->
 <div class="bg-img">
   <div class="container">
-    <div class="topnav"> 
+    <div class="topnav">
+      <a href="/homepage.php">Homepage</a>
       <a href="/profile.php">Profile</a>
-      <a href="#Maps">Maps</a>
+      <a href="/maps2D.php">Maps</a>
       <a href="/login.php">Login</a>
       <a href="/register.php">Register</a>
     </div>
@@ -95,7 +96,7 @@ html {
 }
 
 .about-section {
-  padding: 50px;
+  padding: 5px;
   text-align: center;
   background-color: #8A6767;
   color: white;
