@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+<form method="POST">
+</form>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,7 +79,7 @@ button {
 </head>
 <body>
 
-<form action="/homepage.php">
+<form action="/model/registerLogic.php" method="post">
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>
@@ -83,7 +88,7 @@ button {
     <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
 
   <label for="Phone#"><b>Phone#</b></label>
-    <input type="text" placeholder="Enter Phone#" name="Phone#" id="Phone#" required>
+    <input type="text" placeholder="Enter Phone#" name="phone" id="phone" required>
     
   
   <label for="email"><b>Email</b></label>
@@ -93,12 +98,16 @@ button {
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
     <hr>
-
-
-
+	
+    <?php
+    
+    ?>
+	
+	
     <button type="submit" class="registerbtn">Register</button>
     
-    <a href="/login.php">Already have an account?</a>
+    <a href="/view/login.php">Already have an account?</a>
+	
   </div>
   
   </div>

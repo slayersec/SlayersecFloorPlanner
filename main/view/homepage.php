@@ -8,7 +8,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .bg-img {
   /* The image used */
-  background-image: url("img/mainpage.png");
+  background-image: url("/img/mainpage.png");
 
   min-height: 380px;
 
@@ -56,11 +56,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <div class="bg-img">
   <div class="container">
     <div class="topnav">
-      <a href="/homepage.php">Homepage</a>
-      <a href="/profile.php">Profile</a>
-      <a href="/maps2D.php">Maps</a>
-      <a href="/login.php">Login</a>
-      <a href="/register.php">Register</a>
+      <a href="homepage.php">Homepage</a>
+      <a href="profile.php">Profile</a>
+      <a href="maps2D.php">Maps</a>
+      <a href="login.php">Login</a>
+      <a href="register.php">Register</a>
     </div>
   </div>
  

@@ -21,47 +21,38 @@ require_once "config.php";
 
     
     // Validate credentials
-    if(isset($_POST['uname']) && isset($_POST['psw']) ){
+   if(isset($_POST['uname']) && isset($_POST['psw']) ){
 		
 		$uname = $_POST['uname'];
+		$phone = $_POST['phone'];
+		$email = $_POST['email'];
 		$psw = $_POST['psw'];
+		
+		
 
-
-        //$sql = "insert into login_table  (username, password) 
+		//INSERTING INTO DATABASE OVERRIDE
+        $sql = "insert into login_table  (username, password, employeeID) 
+		                           values('$uname',  '$psw', 111)";
+	    $conn->query($sql);
+		
+		//Link to Employee Profiles
+		//$sql = "insert into login_table  (username, password) 
 		//                           values('$uname',  '$psw')";
-	   // $conn->query($sql);
+	    //$conn->query($sql);
 
 
-		$sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'";
 		
-		//echo $sql;exit;
-		
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) {
-		  // output data of each row
-		  while($row = $result->fetch_assoc()) {
-			  header("location:/view/homepage.php");
-			 
-			 /*echo $row["username"];
-					  echo $row["password"];
-					  echo $row["employeeID"];
-					  */
-		  }
-		} else {
-		  //echo "0 results";
-		    header("location:/view/login.php?status=1");
-        }
 		$conn->close();
-
+		header("location:/view/login.php?status=2");
 		
 		
-		
-	}//outer if 		
+   }	
+	//outer if 		
 		  //Global Variable Passing using Session[]
 		 // $_SESSION["uname"]= $uname;
 		 //$uname= $_SESSION["uname"] ;
-        
+    //header("location: /view/login.php");
+    //header("location: /view/login.php");
    
     
     

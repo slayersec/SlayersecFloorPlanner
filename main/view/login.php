@@ -1,16 +1,23 @@
 <?php
 session_start();
-include "config.php";
+include('../model/config.php');
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: dashboard.php");
+    header("location: homepage.php");
     exit;
 }
-//Define command
-$sql  = "SELECT * FROM login_table" ;
 
-//Echo table output
-$result = mysqli_query($conn, $sql);
-
+$status = "";
+//$status = $_POST['status'];
+/*
+ if (isset($_SESSION['status'] === 1)){
+		  echo "User or password is incorrect <br><br>"; 
+	   }
+	   
+ if ($status == 2)
+	   {
+		  echo "User account registered <br><br>"; 
+	   }	   
+*/
 ?> 
     <form method="POST">
     </form>
@@ -80,17 +87,10 @@ span.psw {
 <body>
 
 
-<?php
-      //Should be abc == 1... idk why it's giving a shit about this
-       if (isset($abc1))
-	   {
-		  echo "User or passwrod is incorrect <br><br>"; 
-	   }
 
-?>
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="/checkcred2.php" method="post">
+<form action="/model/checkcred2.php" method="post">
   <div class="imgcontainer">
     <img src="/img/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
@@ -114,17 +114,14 @@ span.psw {
 
 
 
-    <?php
-    $username = $password = "uname";
-    $username_err = $password_err = "psw";
-    ?>
+ 
 
 
 
 
   <div class="container" style="background-color:#F1F1F1">
 
- <a href="/register">Don't Have an Account? Register Here</a>
+ <a href="/view/register.php">Don't Have an Account? Register Here</a>
   </div> 
 </form>
 
