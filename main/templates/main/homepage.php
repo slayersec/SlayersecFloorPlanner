@@ -56,11 +56,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <div class="bg-img">
   <div class="container">
     <div class="topnav">
-      <a href="homepage.php">Homepage</a>
-      <a href="profile.php">Profile</a>
-      <a href="maps2D.php">Maps</a>
-      <a href="login.php">Login</a>
-      <a href="register.php">Register</a>
+      <a href="/homepage">Homepage</a>
+      <a href="/profile">Profile</a>
+      <a href="/maps2D">Maps</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
     </div>
   </div>
  

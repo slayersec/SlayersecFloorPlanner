@@ -121,7 +121,7 @@ span.psw {
 
   <div class="container" style="background-color:#F1F1F1">
 
- <a href="/view/register.php">Don't Have an Account? Register Here</a>
+ <a href="/register">Don't Have an Account? Register Here</a>
   </div> 
 </form>
 
