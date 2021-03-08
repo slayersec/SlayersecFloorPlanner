@@ -80,7 +80,7 @@ input[type=text], input[type=number] {
         <h1><center> Profile </center> </h1>
     
         <div align = "left">
-            <?php include "imageUpload.php";?>
+            <?php include "/imageUpload";?>
         </div>
     
         <!-- This is the placement of name, empID, and role under the emp pic -->
