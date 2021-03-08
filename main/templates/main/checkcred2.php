@@ -41,7 +41,7 @@ require_once "config.php";
 		if ($result->num_rows > 0) {
 		  // output data of each row
 		  while($row = $result->fetch_assoc()) {
-			  header("location:/view/homepage.php");
+			  header("/homepage");
 			 
 			 /*echo $row["username"];
 					  echo $row["password"];
@@ -50,7 +50,7 @@ require_once "config.php";
 		  }
 		} else {
 		  //echo "0 results";
-		    header("location:/view/login.php?status=1");
+		    header("location:login.php?status=1");
         }
 		$conn->close();
 
