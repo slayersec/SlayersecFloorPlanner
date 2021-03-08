@@ -8,8 +8,10 @@
 * {box-sizing: border-box}
 body {font-family: Verdana; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
 
+.img {
+
+  vertical-align: middle;
   min-height: 380px;
 
   /* Center and scale the image nicely */
