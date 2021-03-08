@@ -92,7 +92,7 @@ span.psw {
 
 <form action="/checkcred2" method="post">
   <div class="imgcontainer">
-    <img src="/static/img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="/static/loginLogo.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
