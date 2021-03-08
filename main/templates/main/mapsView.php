@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <br><br><br><br>
-<h2> map overview </h2>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
@@ -53,8 +50,11 @@ body {font-family: Verdana; margin:0}
 }
 </style>
 </head>
-<body>
 
+
+</style>
+</head>
+<body>
 
 <div class="bg-img">
   <div class="container">
@@ -68,12 +68,9 @@ body {font-family: Verdana; margin:0}
   </div>
  
 </div>
+<br><br><br><br>
 
-
-
-</style>
-</head>
-<body>
+<h2> Map Overview </h2>
 
 <div class="slideshow-container">
 
