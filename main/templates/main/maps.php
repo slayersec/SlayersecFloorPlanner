@@ -75,20 +75,20 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
  
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Map models</div>
+  <img src="map1.jpg" style="width:100%">
+  <div class="text">Map 1</div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Map models2</div>
+  <img src="map2.jpg" style="width:100%">
+  <div class="text">Map 2</div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Map models</div>
+  <img src="map3.jpg" style="width:100%">
+  <div class="text">Map 3</div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
