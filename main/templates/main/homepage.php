@@ -8,7 +8,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .bg-img {
   /* The image used */
-  background-image: url("/img/mainpage.png");
+  background-image: url("/static/homepage.png");
 
   min-height: 380px;
 
