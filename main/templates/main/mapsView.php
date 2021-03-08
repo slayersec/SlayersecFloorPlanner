@@ -60,7 +60,7 @@ body {font-family: Verdana; margin:0}
     <div class="topnav"> 
     <a href="/homepage">Homepage</a>
 		<a href="/profile">Profile</a>
-		<a href="/maps2D">Maps</a>
+		<a href="/mapsView">Maps</a>
 		<a href="/login">Login</a>
 		<a href="/register">Register</a>
     </div>
@@ -78,19 +78,19 @@ body {font-family: Verdana; margin:0}
 
 <div class="mySlides fade">
  
-  <img src="map1.jpg" style="width:100%">
+  <img src="/static/map1.png" style="width:100%">
   <div class="text">Map 1</div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="map2.jpg" style="width:100%">
+  <img src="/static/map2.png" style="width:100%">
   <div class="text">Map 2</div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="map3.jpg" style="width:100%">
+  <img src="/static/map3.png" style="width:100%">
   <div class="text">Map 3</div>
 </div>
 

@@ -27,6 +27,8 @@ urlpatterns = [
     path("profile", views.profile, name="profile"),
     path("imageUpload", views.imageUpload, name="imageUpload"),
     path("maps2D", views.maps2D, name="maps2D"),
+    path("mapsView", views.mapsView, name="mapsView"),
+
 
 
 

@@ -34,3 +34,7 @@ def imageUpload(request):
 def maps2D(request):
    form = UserCreationForm
    return render(request, "main/maps2D.php", context={"formMaps":form})
+
+def mapsView(request):
+   form = UserCreationForm
+   return render(request, "main/mapsView.php", context={"formMapsView":form})
