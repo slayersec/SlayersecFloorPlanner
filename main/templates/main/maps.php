@@ -56,10 +56,11 @@ img {vertical-align: middle;}
 <div class="bg-img">
   <div class="container">
     <div class="topnav"> 
-      <a href="#Profile">Profile</a>
-      <a href="#Maps">Maps</a>
-      <a href="#Login">Login</a>
-      <a href="#Register">Register</a>
+    <a href="/homepage">Homepage</a>
+		<a href="/profile">Profile</a>
+		<a href="/maps2D">Maps</a>
+		<a href="/login">Login</a>
+		<a href="/register">Register</a>
     </div>
   </div>
  
