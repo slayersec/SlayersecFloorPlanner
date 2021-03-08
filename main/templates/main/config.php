@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost"; // no change
-$username = "testroot"; // change
-$password = "toor";				
+$servername = "slayersec.mysql.pythonanywhere-services.com"; // no change
+$username = "slayersec"; // change
+$password = "13146@Data";				
 
 $dbname = "testslayersecdatabase";
 

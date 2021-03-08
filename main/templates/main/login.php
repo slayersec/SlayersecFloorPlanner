@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../model/config.php');
+include('/config');
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: homepage.php");
     exit;
@@ -90,7 +90,7 @@ span.psw {
 
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="/model/checkcred2.php" method="post">
+<form action="/checkcred2" method="post">
   <div class="imgcontainer">
     <img src="/static/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
