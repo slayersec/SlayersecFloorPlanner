@@ -40,8 +40,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .grid-container {
   display: grid;
 
-  grid-template-columns: repeat(10, 0fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(15, 0fr);
+  grid-template-rows: repeat(15, 1fr);
   
   /* grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
