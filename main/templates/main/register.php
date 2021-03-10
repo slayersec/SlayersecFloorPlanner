@@ -83,7 +83,7 @@ button {
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>
-    
+    {% csrf_token %} 
   <label for="Username"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
 
