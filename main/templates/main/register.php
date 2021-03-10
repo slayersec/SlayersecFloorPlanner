@@ -79,7 +79,7 @@ button {
 </head>
 <body>
 
-<form action="/model/registerLogic.php" method="post">
+<form action="registerLogic" method="post">
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>

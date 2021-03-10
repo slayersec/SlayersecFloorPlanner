@@ -14,7 +14,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 */
  
 // Include config file
-require_once "config.php";
+require_once "config";
  
 
 // Processing form data when form is submitted
@@ -50,7 +50,7 @@ require_once "config.php";
 		  }
 		} else {
 		  //echo "0 results";
-		    header("location:login.php?status=1");
+		    header("location:login");
         }
 		$conn->close();
 

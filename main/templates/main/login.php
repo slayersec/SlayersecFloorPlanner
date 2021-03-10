@@ -2,22 +2,10 @@
 session_start();
 include('/config');
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: homepage.php");
+    header("location: homepage");
     exit;
 }
 
-$status = "";
-//$status = $_POST['status'];
-/*
- if (isset($_SESSION['status'] === 1)){
-		  echo "User or password is incorrect <br><br>"; 
-	   }
-	   
- if ($status == 2)
-	   {
-		  echo "User account registered <br><br>"; 
-	   }	   
-*/
 ?> 
     <form method="POST">
     </form>
