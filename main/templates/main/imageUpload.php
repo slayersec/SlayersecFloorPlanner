@@ -75,7 +75,7 @@
      <div class="center">
        <div class="form-input">
          <label for="file-ip-1">
-           <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+           <img id="file-ip-1-preview" src="/static/imageUploadIcon.png">
            <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()"></button>
          </label>
          <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
@@ -95,7 +95,7 @@
       } 
     }
     function myImgRemoveFunctionOne() {
-      document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+      document.getElementById("file-ip-1-preview").src = "/static/imageUploadIcon.png";
     }
 
   </script>
