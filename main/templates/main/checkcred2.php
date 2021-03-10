@@ -66,7 +66,7 @@ require_once "config";
     
     
 ?>
-
+{% csrf_token %}
 
 
 
