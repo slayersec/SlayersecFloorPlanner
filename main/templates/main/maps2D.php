@@ -71,7 +71,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
   <div class="grid-container">
-    <div align = "center">
+    
       <div class="grid-item"></div>
       <div class="grid-item"></div>
       <div class="grid-item"></div>
@@ -221,7 +221,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <div class="grid-item"></div>
       <div class="grid-item"></div>
       <div class="grid-item"></div>
-  </div>
+  
 </div>
 
 </body>
