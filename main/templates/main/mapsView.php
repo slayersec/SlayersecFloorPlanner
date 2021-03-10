@@ -98,6 +98,12 @@ body {font-family: Verdana; margin:0}
 </div>
 <br>
 
+<div class="container" style="background-color:#F1F1F1">
+
+<a href="/maps2D">Add a New Map ?</a>
+
+</div> 
+
 
 <script>
 var slideIndex = 1;

@@ -39,8 +39,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0fr 0fr 0fr 0fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 10px;
 }
 
@@ -66,7 +66,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <a href="/register">Register</a>
     </div>
   </div>
-  <br><br><br><br>
+  <br><br><br><br><br><br><br>
 
 
 
@@ -92,6 +92,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="grid-item">19</div>
     <div class="grid-item">20</div>
     <div class="grid-item">21</div>
+    <div class="grid-item">22</div>
+    <div class="grid-item">23</div>
+    <div class="grid-item">24</div>
+    <div class="grid-item">25</div>
+    <div class="grid-item">26</div>
+    <div class="grid-item">27</div>
+    <div class="grid-item">28</div>
+    <div class="grid-item">29</div>
+    <div class="grid-item">30</div>
+    <div class="grid-item">31</div>
+    <div class="grid-item">32</div>
 
   </div>
 
