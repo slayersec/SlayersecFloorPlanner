@@ -1,3 +1,4 @@
+{% csrf_token %}
 <?php
 
 
@@ -66,7 +67,7 @@ require_once "config";
     
     
 ?>
-{% csrf_token %}
+
 
 
 
