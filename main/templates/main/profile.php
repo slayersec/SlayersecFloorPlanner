@@ -74,11 +74,12 @@ input[type=text], input[type=number] {
 		<a href="/register">Register</a>
     </div>
   </div>
-  <br><br><br><br>
+  
 
     <form action="/action_page">
     <div class="containerProfile">
         <h1><center> Profile </center> </h1>
+        <br><br><br><br>
     
         <div align = "left">
             <?php include "/imageUpload";?>
