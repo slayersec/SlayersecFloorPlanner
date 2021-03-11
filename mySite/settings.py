@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        # 'ENGINE': 'django.db.backends.mysql',
         'NAME': 'slayersec$testslayersecdatabase',
         'USER': 'slayersec',
         'PASSWORD': '13146@Data',
