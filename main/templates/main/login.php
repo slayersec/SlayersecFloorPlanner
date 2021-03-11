@@ -1,12 +1,4 @@
-<?php
-session_start();
-include('/config');
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: homepage");
-    exit;
-}
 
-?> 
     <form method="POST">
     </form>
 

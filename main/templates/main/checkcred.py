@@ -6,10 +6,10 @@ class login():
     
 	def __init__(self):
 		import mysql.connector as mysql
-		self.db_connection = mysql.connect(host=slayersec.mysql.pythonanywhere-services.com, database=testslayersecdatabase, user=slayersec, password=13146@Data)
+		self.db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="testslayersecdatabase", user="slayersec", password="13146@Data")
 
 def add_user_to_db(self,user):
-        sql = "INSERT INTO login (username,password,email,AddedBy) VALUES (%s, %s, %s, %s)"
+        sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'";
         values = (user.username,user.password,user.email,user.email)
         user_cursor = self.db_connection.cursor()
         try:
