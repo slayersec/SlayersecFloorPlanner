@@ -78,7 +78,7 @@ span.psw {
 
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="/checkcred2" method="post">
+<form action="/checkcred" method="post">
   {% csrf_token %}
   <div class="imgcontainer">
     <img src="/static/loginLogo.png" alt="Avatar" class="avatar">
