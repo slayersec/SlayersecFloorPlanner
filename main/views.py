@@ -13,7 +13,6 @@ def login(request):
    form = UserCreationForm
    uname = request.POST.get('uname', None)
    psw = request.POST.get('psw', None)
-   context['uname','psw']=uname, psw
    return render(request, "main/checkcred.py", context={"formLogin":form}) 
 
 def register(request):
