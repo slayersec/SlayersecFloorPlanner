@@ -11,6 +11,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 def login(request):
    form = UserCreationForm
+   uname = request.POST.get('uname', None)
+   psw = request.POST.get('psw', None)
    return render(request, "main/login.html", context={"formLogin":form}) 
 
 def register(request):
