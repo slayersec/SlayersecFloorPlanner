@@ -1,8 +1,8 @@
 #{% csrf_token %}
 
-class login():
 
-	print("Hello!")
+
+print("Hello!")
     
 	def __init__(self):
 		import mysql.connector as mysql
