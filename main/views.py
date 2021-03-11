@@ -11,30 +11,30 @@ from django.contrib.auth.forms import UserCreationForm
 
 def login(request):
    form = UserCreationForm
-   return render(request, "main/login.php", context={"formLogin":form}) 
+   return render(request, "main/login.html", context={"formLogin":form}) 
 
 def register(request):
    form = UserCreationForm
-   return render(request, "main/register.php", context={"formRegister":form})  
+   return render(request, "main/register.html", context={"formRegister":form})  
 
 def homepage(request):
    form = UserCreationForm
-   return render(request, "main/homepage.php", context={"formHomepage":form})  
+   return render(request, "main/homepage.html", context={"formHomepage":form})  
 
 # Profile and uploading an image are on the same form
 
 def profile(request):
    form = UserCreationForm
-   return render(request, "main/profile.php", context={"formProfile":form})  
+   return render(request, "main/profile.html", context={"formProfile":form})  
 
 def imageUpload(request):
    form = UserCreationForm
-   return render(request, "main/imageUpload.php", context={"formProfile":form})
+   return render(request, "main/imageUpload.html", context={"formProfile":form})
 
 def maps2D(request):
    form = UserCreationForm
-   return render(request, "main/maps2D.php", context={"formMaps":form})
+   return render(request, "main/maps2D.html", context={"formMaps":form})
 
 def mapsView(request):
    form = UserCreationForm
-   return render(request, "main/mapsView.php", context={"formMapsView":form})
+   return render(request, "main/mapsView.html", context={"formMapsView":form})
