@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'mySite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'slayersec.mysql.pythonanywhere-services.com',
+        'NAME': 'slayersec$testslayersecdatabase',
+        'USER': 'slayersec',
+        'PASSWORD': '13146@Data',
+        'HOST': 'slayersec.mysql.pythonanywhere-services.com',
     }
 }
 
