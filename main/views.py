@@ -40,3 +40,7 @@ def maps2D(request):
 def mapsView(request):
    form = UserCreationForm
    return render(request, "main/mapsView.html", context={"formMapsView":form})
+
+def checkcred(request):
+   form = UserCreationForm
+   return render(request, "main/checkcred.py", context={"formCheckCred":form})
