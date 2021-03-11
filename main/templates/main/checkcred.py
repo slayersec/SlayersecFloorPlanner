@@ -5,10 +5,8 @@ class login():
 	print("Hello!")
     
 	def __init__(self):
-        import mysql.connector as mysql
-        from backend.db_connection import db_connection
-        parent_db = db_connection()
-        self.db_connection = mysql.connect(host=parent_db.HOST, database=parent_db.DATABASE, user=parent_db.USER, password=parent_db.PASSWORD)
+		import mysql.connector as mysql
+		self.db_connection = mysql.connect(host=slayersec.mysql.pythonanywhere-services.com, database=testslayersecdatabase, user=slayersec, password=13146@Data)
 
 def add_user_to_db(self,user):
         sql = "INSERT INTO login (username,password,email,AddedBy) VALUES (%s, %s, %s, %s)"
