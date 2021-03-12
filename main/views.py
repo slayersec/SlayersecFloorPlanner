@@ -2,52 +2,51 @@
    This page is showing what is actually displayed on the webpage. So stuff like HTML and python can
    work together to create what is showing on the physical webpage hence the class name "views"
 """
-import mysql.connector as mysql
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
+
 
 # Create your views here.
 
-def login(request):
-   form = UserCreationForm
-   if request.POST:
-      uname = request.POST.get('uname', None)
-      psw = request.POST.get('psw', None)
-      print("Hello!")
-      print(uname)
-      print(psw)
-      nav = 0
-      db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="slayersec$testslayersecdatabase", user="slayersec", password="13146@Data")
-      sql = "SELECT * FROM login_table WHERE username = '%s'  and password= '%s'"
-      values = (uname,psw)
-      user_cursor = db_connection.cursor()
-      user_cursor.execute(sql, values)
-      html = "<html><body><%    
-      for row in result: 
-         print(row) 
-         print("\n")       %></body></html>" 
-      return HttpResponse(html)
+def login_request(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request=request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                messages.info(request, f"You are now logged in as {username}")
+                return redirect('main:homepage')
+            else:
+                messages.error(request, "Invalid username or password.")
+        else:
+            messages.error(request, "Invalid username or password.")
+    form = AuthenticationForm()
+    LOGIN_REDIRECT_URL = '/homepage'
+    return render(request = request,
+                    template_name = "main/login.html",
+                    context={"form":form})
 
 
-   return render(request, "main/login.html", context={"formLogin":form}) 
- #return render(request, "main/login.html", context={"formLogin":form})
-   
-    
 
 def register(request):
    form = UserCreationForm
-   return render(request, "main/register.html", context={"formRegister":form})  
+   return render(request, "main/register.html", context={"formRegister":form})
 
 def homepage(request):
    form = UserCreationForm
-   return render(request, "main/homepage.html", context={"formHomepage":form})  
+   return render(request, "main/homepage.html", context={"formHomepage":form})
 
 # Profile and uploading an image are on the same form
 
 def profile(request):
    form = UserCreationForm
-   return render(request, "main/profile.html", context={"formProfile":form})  
+   return render(request, "main/profile.html", context={"formProfile":form})
 
 def imageUpload(request):
    form = UserCreationForm

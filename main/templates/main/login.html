@@ -1,7 +1,6 @@
+
 {% csrf_token %}
 {%block content%}
-    <form method="POST">
-    </form>
 
 <!DOCTYPE html>
 <html>
@@ -57,7 +56,7 @@ span.psw {
   p.ex1 {
   max-width: 300px;
   }
-  
+
   span.psw {
      display: block;
      float: none;
@@ -71,21 +70,17 @@ span.psw {
 
 <h2> <center> Floor Management Login </center></h2>
 
-<form action="/login" method="post">
+<form method="POST">
   {% csrf_token %}
+
   <div class="imgcontainer">
     <img src="/static/loginLogo.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
+     {{form.as_p}}
     <button type="submit">Login</button>
-    <label> 
+    <label>
     </label>
   </div>
 
@@ -93,9 +88,8 @@ span.psw {
   <div class="container" style="background-color:#F1F1F1">
 
  <a href="/register">Don't Have an Account? Register Here</a>
-  </div> 
+  </div>
 </form>
-<h1> Debuging: Event for {{uname}} </h1>
 </body>
 </html>
 {%endblock%}
