@@ -19,11 +19,14 @@ def login(request):
       print(psw)
       nav = 0
       db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="slayersec$testslayersecdatabase", user="slayersec", password="13146@Data")
-      sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'"
+      sql = "SELECT * FROM login_table WHERE username = '%s'  and password= '%s'"
       values = (uname,psw)
       user_cursor = db_connection.cursor()
       user_cursor.execute(sql, values)
-      html = "<html><body>Read $uname, $psw  .</body></html>" 
+      html = "<html><body><%    
+      for row in result: 
+         print(row) 
+         print("\n")       %></body></html>" 
       return HttpResponse(html)
 
 
