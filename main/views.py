@@ -22,23 +22,13 @@ def login(request):
       sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'"
       values = (uname,psw)
       user_cursor = db_connection.cursor()
-      try:
-         user_cursor.execute(sql, values)
-         db_connection.commit()
-         user_cursor.close()
-         nav = 1
-         html = "<html><body>Read $uname, $psw  .</body></html>" 
-         return HttpResponse(html)
-         #return render(request, "main/login.html", context={"formLogin":form})
-      except:
-         user_cursor.close()
-         nav = 0
-         html = "<html><body>Read $uname, $psw in except .</body></html>"
-         return HttpResponse(html)
-         #return render(request, "main/login.html", context={"formLogin":form})
+      user_cursor.execute(sql, values)
+      html = "<html><body>Read $uname, $psw  .</body></html>" 
+      return HttpResponse(html)
+
 
    return render(request, "main/login.html", context={"formLogin":form}) 
-
+ #return render(request, "main/login.html", context={"formLogin":form})
    
     
 
