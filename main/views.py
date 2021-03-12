@@ -2,7 +2,7 @@
    This page is showing what is actually displayed on the webpage. So stuff like HTML and python can
    work together to create what is showing on the physical webpage hence the class name "views"
 """
-import mysql.connector as mysql
+from mysql import mysql.connector as mysql
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
@@ -20,7 +20,7 @@ def login(request):
       nav = 0
       db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="testslayersecdatabase", user="slayersec", password="13146@Data")
       sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'"
-      values = (uname,pwd)
+      values = (uname,psw)
       user_cursor = db_connection.cursor()
       try:
          user_cursor.execute(sql, values)
@@ -36,7 +36,7 @@ def login(request):
          html = "<html><body>Read $uname, $psw in except .</body></html>" % now
          return HttpResponse(html)
          #return render(request, "main/login.html", context={"formLogin":form})
-
+   return render(request, "main/login.html", context={"formLogin":form}) 
 
    
     
