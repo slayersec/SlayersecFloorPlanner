@@ -2,7 +2,7 @@
    This page is showing what is actually displayed on the webpage. So stuff like HTML and python can
    work together to create what is showing on the physical webpage hence the class name "views"
 """
-from mysql import mysql.connector as mysql
+import mysql.connector as mysql
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
