@@ -27,16 +27,16 @@ def login(request):
          db_connection.commit()
          user_cursor.close()
          nav = 1
-         html = "<html><body>Read $uname, $psw  .</body></html>" % now
+         html = "<html><body>Read $uname, $psw  .</body></html>" 
          return HttpResponse(html)
          #return render(request, "main/login.html", context={"formLogin":form})
       except:
          user_cursor.close()
          nav = 0
-         html = "<html><body>Read $uname, $psw in except .</body></html>" % now
+         html = "<html><body>Read $uname, $psw in except .</body></html>"
          return HttpResponse(html)
          #return render(request, "main/login.html", context={"formLogin":form})
-   sql.close()
+
    return render(request, "main/login.html", context={"formLogin":form}) 
 
    
