@@ -18,7 +18,7 @@ def login(request):
       print(uname)
       print(psw)
       nav = 0
-      db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="testslayersecdatabase", user="slayersec", password="13146@Data")
+      db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="slayersec$testslayersecdatabase", user="slayersec", password="13146@Data")
       sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'"
       values = (uname,psw)
       user_cursor = db_connection.cursor()
