@@ -2,7 +2,7 @@
    This page is showing what is actually displayed on the webpage. So stuff like HTML and python can
    work together to create what is showing on the physical webpage hence the class name "views"
 """
-
+import mysql.connector as mysql
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
@@ -11,9 +11,31 @@ from django.contrib.auth.forms import UserCreationForm
 
 def login(request):
    form = UserCreationForm
-   uname = request.POST.get('uname', None)
-   psw = request.POST.get('psw', None)
-   return render(request, "main/login.html", context={"formLogin":form}) 
+   if request.POST:
+      uname = request.POST.get('uname', None)
+      psw = request.POST.get('psw', None)
+      print("Hello!")
+      print(uname)
+      print(psw)
+      nav = 0
+      db_connection = mysql.connect(host="slayersec.mysql.pythonanywhere-services.com", database="testslayersecdatabase", user="slayersec", password="13146@Data")
+      sql = "SELECT * FROM login_table WHERE username = '$uname'  and password= '$psw'"
+      values = (uname,pwd)
+      user_cursor = db_connection.cursor()
+      try:
+         user_cursor.execute(sql, values)
+         db_connection.commit()
+         user_cursor.close()
+         nav = 1
+         return render(request, "main/homepage.html", context={"formLogin":form})
+      except:
+         user_cursor.close()
+         nav = 0
+         return render(request, "main/login.html", context={"formLogin":form})
+
+
+   
+    
 
 def register(request):
    form = UserCreationForm
