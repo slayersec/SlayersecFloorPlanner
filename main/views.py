@@ -36,6 +36,7 @@ def login(request):
          html = "<html><body>Read $uname, $psw in except .</body></html>" % now
          return HttpResponse(html)
          #return render(request, "main/login.html", context={"formLogin":form})
+   sql.close()
    return render(request, "main/login.html", context={"formLogin":form}) 
 
    
