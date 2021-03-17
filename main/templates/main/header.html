@@ -20,7 +20,11 @@
 
   <nav>
     <div class="nav-wrapper" color="#272727"
+    {% if user.is_authenticated %}
       <a href="/" class="brand-logo">Welcome, {{user.username|title}} </a>
+    {% else %}
+      <a href="/" class="brand-logo">A Slayersec Security Company </a>
+    {% endif %} 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {% include 'includes/navbaritems.html' %}
       </ul>
