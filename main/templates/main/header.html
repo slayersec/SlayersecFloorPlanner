@@ -1,6 +1,6 @@
   {% include 'includes/messaging.html' %}
   {% include 'includes/navbaritems.html' %}      
-
+{%block content%}
 <head>
     {% load static %}
     <!-- Compiled and minified CSS -->
@@ -31,3 +31,4 @@
 
 <!-- Prism JS -->
 <script src="{% static "tinymce/js/prism.js" %}"></script>
+{%endblock%}
