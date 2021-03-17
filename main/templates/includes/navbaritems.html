@@ -1,6 +1,6 @@
  <li><a href="/">Home</a></li>
         {% if user.is_authenticated %}
-             <li><a href="/account">{{user.username|title}}</a></li>
+             <li><a href="/profile">{{user.username|title}}</a></li>
              <li><a href="/login">Logout</a></li>
         {% else %}
             <li><a href="/login">Login</a></li>

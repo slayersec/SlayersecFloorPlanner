@@ -32,7 +32,10 @@ def login_request(request):
                     template_name = "main/login.html",
                     context={"form":form})
 
-
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Logged out successfully!")
+    return redirect("main:homepage")
 
 def register(request):
     if request.method == "POST":
