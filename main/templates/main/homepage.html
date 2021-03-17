@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+{% extends 'main/header.html' %}
 {% csrf_token %}
-<html>
+{%block content%}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -183,4 +183,4 @@ html {
 
 </body>
     <body>
-</html>
+{%block content%}
