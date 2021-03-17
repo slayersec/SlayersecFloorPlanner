@@ -81,36 +81,26 @@ button {
 
 
 <form action="/registerLogic" method="post">
+
   <div class="container">
     <h1><center> Register Page </center> </h1>
     <hr>
-    {% csrf_token %} 
-  <label for="Username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
-
-  <label for="Phone#"><b>Phone#</b></label>
-    <input type="text" placeholder="Enter Phone#" name="phone" id="phone" required>
-    
-  
-  <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-  <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    {% csrf_token %}
+    {{form.as_p}}
 
     <hr>
-	
+
     <?php
-    
+
     ?>
-	
-	
+
+
     <button type="submit" class="registerbtn">Register</button>
-    
+
     <a href="/login">Already have an account?</a>
-	
+
   </div>
-  
+
   </div>
 </form>
 
