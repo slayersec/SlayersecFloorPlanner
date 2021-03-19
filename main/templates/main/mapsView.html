@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends 'main/header.html' %}
+{% csrf_token %}
+{%block content%}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -62,8 +63,6 @@ body {font-family: Verdana; margin:0}
     <a href="/homepage">Homepage</a>
 		<a href="/profile">Profile</a>
 		<a href="/mapsView">Maps</a>
-		<a href="/login">Login</a>
-		<a href="/register">Register</a>
     </div>
   </div>
  
@@ -135,4 +134,4 @@ function showSlides(n) {
 </script>
 
 </body>
-</html> 
+{%endblock%}
