@@ -53,6 +53,40 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-align: center;
 }
 
+.white-item {
+  background-color: rgba(255, 255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 0px;
+  text-align: left;
+  width: 5%;
+}
+
+.black-item {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 5%
+}
+.blue-item {
+  background-color: rgba(0, 0, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  /* text-align: center; */
+  width: 5%
+  
+}
+
+.colors-container {
+  display:flex;
+  flex-direction:row;
+  justify-contnet:center;
+  align-items:center;
+}
+
 </style>
 </head>
 
@@ -68,8 +102,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </div>
   </div>
   <br><br><br><br><br><br><br>
-
-
+    
+  <div class="colors-container">
+   <div class="white-item"></div> = Floor
+   <div class="black-item"></div> = Wall
+   <div class="blue-item"></div> = Door
+  </div>
+   
 
   <div class="grid-container">
     <div class="grid-item"></div>
