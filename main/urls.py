@@ -22,6 +22,7 @@ urlpatterns = [
     # main path is changed to view the profile. Original is: path("", views.login, name="login"),
     path("", views.login_request, name="login"),
     path("login", views.login_request, name="login"),
+    path("logout", views.logout_request, name="logout"),
     path("checkcred", views.checkcred, name="checkcred"),
     path("register", views.register, name="register"),
     path("homepage", views.homepage, name="homepage"),
