@@ -140,19 +140,17 @@ element {
 
 </script>
 
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js%22%3E"></script>
-
-<script> 
-
-function screenshot() { 
-    html2canvas(document.querySelector("#capture")).then(canvas => {
-      document.body.appendChild(canvas)
-});
- 
-</script>
-
 </body>
 
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js%22%3E"></script>
+
+<script>
+function screenshot() { 
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+      document.body.appendChild(canvas) 
+});
+}
+</script>
 
 
 {%endblock%}
