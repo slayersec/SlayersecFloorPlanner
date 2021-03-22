@@ -118,6 +118,7 @@ element {
   <div id="capture" style="padding: 10px; background: #f5da55">
     <h4 style="color: #000; ">Take a Screenshot</h4>
   </div>
+  <button> Take Screenshot </button>
 
     <!-- Grid and Script  -->
    
@@ -136,6 +137,7 @@ element {
   this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
     this.style.backgroundColor = col[this.dataset.count%col.length] 
   }
+
 </script>
 
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js%22%3E"></script>
@@ -148,7 +150,6 @@ function screenshot() {
 });
  
 </script>
-
 
 </body>
 
