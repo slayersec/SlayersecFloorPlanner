@@ -78,7 +78,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   font-size: 30px;
   /* text-align: center; */
   width: 5%
-  
+}
+
+element {
+
 }
 
 .colors-container {
@@ -110,6 +113,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
    <div class="blue-item"></div> = Door
   </div>
 
+  <!-- This is the screenshot message -->
+
+  <div id="capture" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Take a Screenshot</h4>
+  </div>
+
     <!-- Grid and Script  -->
    
   {% include 'includes/grid.html' %}
@@ -117,21 +126,29 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <script>
 
   var count = 1;
-  var white = 0;
-  var blue = 1;
-  var black = 2;
+  
   document.querySelectorAll('.grid-item').forEach(function(a){
   a.addEventListener('click', setColor)
   })
 
-  var col = [ "black","#0000FF", "#FFFFFF" ];
+  var col = [ "black","blue", "white" ];
   function setColor() {
   this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
     this.style.backgroundColor = col[this.dataset.count%col.length] 
   }
-
-
 </script>
 
 </body>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js%22%3E"></script>
+
+<script> 
+
+function screenshot() { 
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+      document.body.appendChild(canvas)
+});
+ 
+</script>
+
 {%endblock%}
