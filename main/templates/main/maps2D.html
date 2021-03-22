@@ -118,6 +118,7 @@ element {
   <div id="capture" style="padding: 10px; background: #f5da55">
     <h4 style="color: #000; ">Take a Screenshot</h4>
   </div>
+  <button onclick="screenshot()"> Take Screenshot </button>
   
 
     <!-- Grid and Script  -->
@@ -148,15 +149,7 @@ element {
 
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js%22%3E"></script>
 
-<script>
-function screenshot() { 
-    html2canvas(document.querySelector("#capture")).then(canvas => {
-      document.body.appendChild(canvas) 
-});
-}
-<button onclick="screenshot()"> Take Screenshot </button>
-
-</script>
+<script src="screenshot.js"></script>
 
 
 
