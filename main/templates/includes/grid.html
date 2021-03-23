@@ -55,7 +55,7 @@ function changeColor() {
   a.addEventListener('click', setColor)
   })
 
-  var col = [ "black","blue", "white" ];
+  var col = [ "#000000","#0000FF", "#FFFFFF" ];
   function setColor() {
   this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
     this.style.backgroundColor = col[this.dataset.count%col.length] 
