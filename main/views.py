@@ -75,6 +75,14 @@ def imageUpload(request):
 
 def maps2D(request):
    form = UserCreationForm
+   #This code will create a database entry into the mapdata table (SAVING)
+   #
+   #Takes 2 variables: 
+   #            name: (string at a max 20 characters) 
+   #            dataset: (240 character string each being a 0 (floor), 1(wall), or 2(door)).
+   #
+   #  mapdata = mapdata(mapName=name, data=dataset)
+
    return render(request, "main/maps2D.html", context={"formMaps":form})
 
 def mapsView(request):
