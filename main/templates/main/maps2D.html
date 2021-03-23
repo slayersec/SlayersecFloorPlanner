@@ -155,24 +155,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <br><br>
 
-  <!-- This is the screenshot message 
-
-  <div id="capture" style="padding: 10px; background: #f5da55">
-    <h4 style="color: #000; ">Take a Screenshot</h4>
-  </div>
-  <button onclick="screenshot()"> Take Screenshot </button> 
-  -->
-
-    <!-- Grid and Script  
-   
-  {% include 'includes/grid.html' %}
--->
-
 <script>
 
   var count = 1;
   
-  document.querySelectorAll('.grid-item').forEach(function(a){
+  document.querySelectorAll('.grid').forEach(function(a){
   a.addEventListener('click', setColor)
   })
 
