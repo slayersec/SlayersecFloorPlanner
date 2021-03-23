@@ -46,19 +46,30 @@ $(document).ready(function() {
         });
         */
 
-        var colors = [ "#000000","#0000FF","#FFFFFF" ];
+        $(".grid").forEach(function(a){
+            a.addEventListener('click', setColor)
+            })
 
-        $(".grid").click(function() {
-            $(this).css("background-color", "colors") 
-            });
+            var col = [ "#000000","#0000FF","#FFFFFF" ];
+        
+    function setColor() {
+        this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+        this.style.backgroundColor = col[this.dataset.count%col.length] 
+    }
+
+        
 
     });
     
 });
 
+/*
+var colors = [ "#000000","#0000FF","#FFFFFF" ];
 
-
-
+        $(".grid").click(function() {
+            $(this).css("background-color", "colors") 
+            });
+*/
 
 
 
