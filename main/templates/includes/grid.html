@@ -52,7 +52,7 @@ $(document).ready(function() {
         a.addEventListener("click", setColor)
         })
 
-        myGrid = [ "#000000","#0000FF","#FFFFFF" ];
+        myGrid = [ "#FFFFFF", "#000000","#0000FF" ];
         function setColor() {
         this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
             this.style.backgroundColor = myGrid[this.dataset.count%myGrid.length] 
