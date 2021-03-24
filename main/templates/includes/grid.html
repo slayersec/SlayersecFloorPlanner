@@ -6,11 +6,12 @@ function createGrid(x) {
     for (var rows = 0; rows < x; rows++) {
         for (var columns = 0; columns < x; columns++) {
             $("#container").append("<div id='myGrid' class='grid'></div>");
-            var items = ['grid'];
+            
         };
     };
     $(".grid").width(960/x);
     $(".grid").height(960/x);
+    var items = ['grid'];
 };
 
 // function that clears the grid
