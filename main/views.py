@@ -59,10 +59,13 @@ def register(request):
     return render(request = request,
                   template_name = "main/register.html",
                   context={"form":form})
-                  
+
 @login_required
 def homepage(request):
    form = UserCreationForm
+   if user is None:
+       messages.error(request, f"You must be logged in to access the website")
+       return redirect('main:homepage')
    return render(request, "main/homepage.html", context={"formHomepage":form})
 
 # Profile and uploading an image are on the same form
