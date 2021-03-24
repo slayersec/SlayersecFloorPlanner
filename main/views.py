@@ -100,3 +100,9 @@ def mapsView(request):
 def checkcred(request):
    form = UserCreationForm
    return render(request, "main/checkcred.py", context={"formCheckCred":form})
+
+
+
+def saveGrid(request):
+   form = UserCreationForm
+   return render(request, "main/saveGrid.html", context={"saveGrid":form})
