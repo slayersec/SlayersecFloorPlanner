@@ -4,7 +4,6 @@
 // function that builds a grid in the "container"
 function createGrid(x) {
     for (var rows = 0; rows < x; rows++) {
-        item[x] = [];
         for (var columns = 0; columns < x; columns++) {
             $("#container").append("<div id='myGrid' class='grid'></div>");
             
@@ -27,7 +26,7 @@ function refreshGrid(){
     createGrid(z);
 };
 
-/*
+
 function saveMap() {
     var height = 4;
     var width = 3;
@@ -37,7 +36,7 @@ function saveMap() {
             for (var j = 0; j < height; j++) {
                 var x = width - i + j;
                 if(x < 0 || x >= width) continue;
-                document.write(%d%  x,j);
+                document.write(x,j);
             
                // "#FFFFFF" = 0;
                // "#000000" = 1;
@@ -47,16 +46,15 @@ function saveMap() {
 
     }
 }
-*/
+
 
 // THIS IS WHERE THE DOCUMENT IS READY AND BEGINS EXECUTING
 // -------------------------------------------------------------------------------------------------
 
 // allows the click of a button to prompt the user to create a new grid
 $(document).ready(function() {
-    var item = [];
     createGrid(16);
-    console.log(item);
+    
 /*
     $(".grid").mouseover(function() {
         $(this).css("background-color", "black");
