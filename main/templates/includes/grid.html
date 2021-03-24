@@ -2,14 +2,14 @@
 
 <script>
 // function that builds a grid in the "container"
-var gridBlock{html:"\"<div class='grid'></div>\"", color:0, blockID:0}
+var gridBlock{html:"<div class='grid'></div>", color:0, blockID:0}
 let grid = []
 grid.push(gridBlock)
 
 function createGrid(x) {
     for (var rows = 0; rows < x; rows++) {
         for (var columns = 0; columns < x; columns++) {
-            $("#container").append(gridBlock.html);
+            $("#container").append("<div class='grid'></div>");
         };
     };
     $(".grid").width(960/x);
