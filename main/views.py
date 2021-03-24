@@ -59,6 +59,7 @@ def register(request):
     return render(request = request,
                   template_name = "main/register.html",
                   context={"form":form})
+                  
 @login_required
 def homepage(request):
    form = UserCreationForm
@@ -69,10 +70,12 @@ def homepage(request):
 def profile(request):
    form = UserCreationForm
    return render(request, "main/profile.html", context={"formProfile":form})
+
 @login_required
 def imageUpload(request):
    form = UserCreationForm
    return render(request, "main/imageUpload.html", context={"formProfile":form})
+
 @login_required
 def maps2D(request):
    #This code will create a database entry into the mapdata table (SAVING)
@@ -84,10 +87,12 @@ def maps2D(request):
    #  mapdata = mapdata(mapName=name, data=dataset)
    form = UserCreationForm
    return render(request, "main/maps2D.html", context={"formMaps":form})
+
 @login_required
 def mapsView(request):
    form = UserCreationForm
    return render(request, "main/mapsView.html", context={"formMapsView":form})
+
 @login_required
 def checkcred(request):
    form = UserCreationForm
