@@ -72,12 +72,20 @@ $(document).ready(function() {
         */
 
         var count = 1;
+        var hi = "#FFFFFF";
+        var lol = "#000000";
+        var yo = "#0000FF";
   
         document.querySelectorAll(".grid").forEach(function(a){
         a.addEventListener("click", setColor)
         })
 
-        col = [ "#000000", "#FFFFFF", "#0000FF" ];
+        col = [ hi, lol, yo ];
+
+        //if (col = "#FFFFFF") {
+
+
+       // }
 
     function setColor() {
         this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
