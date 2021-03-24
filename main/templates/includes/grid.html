@@ -6,6 +6,7 @@ function createGrid(x) {
     for (var rows = 0; rows < x; rows++) {
         for (var columns = 0; columns < x; columns++) {
             $("#container").append("<div id='myGrid' class='grid'></div>");
+            var items = ['grid'];
         };
     };
     $(".grid").width(960/x);
@@ -24,6 +25,37 @@ function refreshGrid(){
     clearGrid();
     createGrid(z);
 };
+
+
+function saveMap() {
+    var height = 4;
+    var width = 3;
+
+    if($(".saveGrid")) {
+        for (var i = 0; i < width + height; i++) {
+            for (var j = 0; j < height; j++) {
+                var x = width - i + j;
+                if(x < 0 || x >= width) continue;
+                document.write(%d%  x,j);
+            
+               // "#FFFFFF" = 0;
+               // "#000000" = 1;
+               // "#0000FF" = 2;
+
+
+
+            };
+        
+        };
+            
+
+
+    }
+
+    
+
+}
+
 
 // create a 16x16 grid when the page loads
 // creates a hover effect that changes the color of a square to black when the mouse passes over it, leaving a (pixel) trail through the grid
@@ -53,7 +85,8 @@ $(document).ready(function() {
         })
 
         cols = [ "#000000", "#FFFFFF", "#0000FF" ];
-        function setColor() {
+
+    function setColor() {
         this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
             this.style.backgroundColor = cols[this.dataset.count%cols.length] 
         }
