@@ -5,7 +5,7 @@
 function createGrid(x) {
     for (var rows = 0; rows < x; rows++) {
         for (var columns = 0; columns < x; columns++) {
-            $("#container").append("<div id='myGrid' class='grid'></div>");
+            $("#container").append("<div id='myGrid' class='grid'>". document.write(1)."</div>");
            
         };
     };
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
     function setColor() {
         this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
-            this.style.backgroundColor = 1 
+            this.style.backgroundColor = col[this.dataset.count%col.length] 
         }
 
         
