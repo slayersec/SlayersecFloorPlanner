@@ -7,14 +7,12 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
 def login_request(request):
-    if request.user.is_authenticated():
-        messages.info(request, f"Logging you in as {{user.username|title}}")
-        return redirect('homepage')
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -61,21 +59,21 @@ def register(request):
     return render(request = request,
                   template_name = "main/register.html",
                   context={"form":form})
-
+@login_required
 def homepage(request):
    form = UserCreationForm
    return render(request, "main/homepage.html", context={"formHomepage":form})
 
 # Profile and uploading an image are on the same form
-
+@login_required
 def profile(request):
    form = UserCreationForm
    return render(request, "main/profile.html", context={"formProfile":form})
-
+@login_required
 def imageUpload(request):
    form = UserCreationForm
    return render(request, "main/imageUpload.html", context={"formProfile":form})
-
+@login_required
 def maps2D(request):
    #This code will create a database entry into the mapdata table (SAVING)
    #
@@ -86,11 +84,11 @@ def maps2D(request):
    #  mapdata = mapdata(mapName=name, data=dataset)
    form = UserCreationForm
    return render(request, "main/maps2D.html", context={"formMaps":form})
-
+@login_required
 def mapsView(request):
    form = UserCreationForm
    return render(request, "main/mapsView.html", context={"formMapsView":form})
-
+@login_required
 def checkcred(request):
    form = UserCreationForm
    return render(request, "main/checkcred.py", context={"formCheckCred":form})
