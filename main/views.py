@@ -12,6 +12,9 @@ from django.contrib import messages
 # Create your views here.
 
 def login_request(request):
+    if request.user.is_authenticated():
+        messages.info(request, f"Logging you in as {{user.username|title}}")
+        return redirect('homepage')
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
