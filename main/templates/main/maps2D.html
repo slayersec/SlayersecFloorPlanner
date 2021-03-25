@@ -6,6 +6,9 @@
 
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"> </script>
 
+  <button id="btn">Capture</button>
+
+
   <link rel=stylesheet type="text/css" href="/static/grid.css">
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -169,7 +172,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <center><button class="newGrid">New Grid</button></center>
   {% include 'includes/screenshot.html' %}
 
-  <button id="btn">Capture</button>
 
  <div class="specific"> 
   
@@ -196,6 +198,28 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!--  <center><button class="saveGrid">Save</button></center> -->
 
 
+<script>
+
+const capture = () => {
+  const body = document.querySelector('body');
+  body.id = 'capture';
+  html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.body.appendChild(canvas);
+  }).then(() => {
+    var canvas = document.querySelector('canvas');
+    canvas.style.display = 'none';
+    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    var a = document.createElement("a");
+    a.setAttribute('download', 'myImage.png');
+    a.setAttribute('href', image);
+    a.click();
+  });
+};
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click', capture)
+
+</script>
 
 
 
