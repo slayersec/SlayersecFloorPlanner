@@ -6,8 +6,18 @@
 
 
 
+<script>
 
-<center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center>  
+document.getElementById("capture");
+var img = canvas.toDataURL("image/png");
+document.write('<img src="'+img+'"/>');
+
+
+
+
+
+
+</script>
 
 
 
