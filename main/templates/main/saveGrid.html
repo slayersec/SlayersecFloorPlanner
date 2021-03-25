@@ -6,11 +6,18 @@
 
 
 
+<center><button type="submit" onclick="postImage()"> Post Image </button></center>  
+
+
+
 <script>
 
-document.getElementById("capture");
-var img = canvas.toDataURL("image/png");
-document.write('<img src="'+img+'"/>');
+funciton postImage() {
+    var canvas = document.getElementById("capture");
+    var img = canvas.toDataURL("image/png");
+    document.write('<img src="'+img+'"/>');
+
+}
 
 
 
