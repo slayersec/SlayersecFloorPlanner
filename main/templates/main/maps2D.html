@@ -164,7 +164,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!--  <center><button class="saveGrid">Save</button></center> -->
   {% include 'includes/screenshot.html' %}
 
-  <form action="/saveGrid" method="POST" {% csrf_token %}>
+  <form action="/saveGrid" method="POST" >{% csrf_token %}
     <center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center>  
 
     
