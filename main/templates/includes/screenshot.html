@@ -1,7 +1,7 @@
 {% csrf_token %}
 <script>
 
-document.querySelector('button').addEventListener('click', function() {
+document.querySelector('btn btn-default').addEventListener('click', function() {
         html2canvas(document.querySelector('.specific'), {
             onrendered: function(canvas) {
                 // document.body.appendChild(canvas);
