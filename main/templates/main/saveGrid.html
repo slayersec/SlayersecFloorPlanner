@@ -13,9 +13,10 @@
 <script>
 
 funciton postImage() {
-    $("#capture").document.getElementById("capture");
-    var img = canvas.toDataURL("image/png");
-    document.write('<img src="'+img+'"/>');
+    html2canvas(document.getElementById("capture")).then(function(canvas) {
+        document.getElementById("capture").src= canvas.toDataURL();
+
+    });
 
 }
 
