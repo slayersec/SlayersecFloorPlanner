@@ -170,7 +170,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center> --> 
 
   <center><button class="newGrid">New Grid</button></center>
-  {% include 'includes/screenshot.html' %}
 
 
  <div id="capture" style="padding: 10px;">
@@ -203,7 +202,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 function saveImage() {
   
 const capture = () => {
-  const body = document.querySelector('<div id="capture" style="padding: 10px;">');
+  const body = document.querySelector('body');
   body.id = 'capture';
 
   html2canvas(document.querySelector("#capture")).then(canvas => {
