@@ -157,14 +157,27 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <!--  THIS IS WHAT IS CAUSING THE SCREENSHOT TO TAKE -->
 
+  {% include 'includes/screenshot.html' %}
+  <center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center>  
+
+
  <div id="capture" style="padding: 10px; background: #f5da55">
     <h4 style="color: #000; ">Hello world!</h4>
-</div>
+
+    <!-- Make a new grid using the javascript file -->
+
+    <center><button class="newGrid">New Grid</button></center>
+
+    <div id="container"></div>
+
+    {% include 'includes/grid.html' %}
+
+
+
+  </div>
 
 <!--  <center><button class="saveGrid">Save</button></center> -->
-  {% include 'includes/screenshot.html' %}
 
-    <center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center>  
 
   <form action="/saveGrid" method="POST" >{% csrf_token %}
 
@@ -172,14 +185,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 </form>
 
+<!-- Where the Grid stuff normally goes-->
 
-<!-- Make a new grid using the javascript file -->
-
-<center><button class="newGrid">New Grid</button></center>
-
-<div id="container"></div>
-
-{% include 'includes/grid.html' %}
 
 
 
