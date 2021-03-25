@@ -99,7 +99,7 @@ def checkcred(request):
    return render(request, "main/checkcred.py", context={"formCheckCred":form})
 
 
-
+@login_required
 def saveGrid(request):
    form = UserCreationForm
    return render(request, "main/saveGrid.html", context={"saveGrid":form})
