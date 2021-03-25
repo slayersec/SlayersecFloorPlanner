@@ -167,9 +167,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
   <center><button class="newGrid">New Grid</button></center>
 
- <form action="/saveGrid" method="POST" id="capture" style="padding: 10px"> {% csrf_token %}
-  <center><button type="submit" onclick="screenshot()"> Take Screenshot </button></center>  
-
+ <div id="capture" style="padding: 10px"> {% csrf_token %}
+  
+  
+  <center> <button type="button" class="btn btn-default">Take a Screenshot!</button> </center>
 
 
 

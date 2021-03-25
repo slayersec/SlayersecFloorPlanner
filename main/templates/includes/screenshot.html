@@ -1,13 +1,23 @@
 {% csrf_token %}
 <script>
 
+document.querySelector('button').addEventListener('click', function() {
+        html2canvas(document.querySelector('.capture'), {
+            onrendered: function(canvas) {
+                // document.body.appendChild(canvas);
+              return Canvas2Image.saveAsPNG(canvas);
+            }
+        });
+    });
+
+/*
 function screenshot() {
     html2canvas(document.querySelector("#capture")).then(canvas => {
         document.body.appendChild(canvas)
 
     });
 }
-
+*/
 
 
 
