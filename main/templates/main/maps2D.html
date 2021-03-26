@@ -169,15 +169,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <center><button class="newGrid">New Grid</button></center>
 
 
-<form method="POST" >{% csrf_token %}
+
  <div id="capture" style="padding: 10px;">
     <center> <button type="submit" id="btn"> Take Screenshot </button>
     <div id="container"></div>
+    <form method="POST" >{% csrf_token %}
+    </form>
  <!---   <a download=myImage.png> -->
 
   </div>
 
-</form>
+
 
 <!--
   <div id="capture" style="padding: 10px">
