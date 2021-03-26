@@ -202,7 +202,7 @@ const capture = () => {
   const body = document.querySelector('body');
   body.id = 'capture';
 
-  html2canvas(document.querySelector("container")).then(canvas => {
+  html2canvas(document.querySelector("#capture")).then(canvas => {
     document.body.appendChild(canvas);
 
   }).then(() => {
