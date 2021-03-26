@@ -169,11 +169,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <center><button class="newGrid">New Grid</button></center>
 
 
-<!--- <form action="myImage.png" method="POST" >{% csrf_token %}  -->
-
-  
-
-
+<form method="POST" >{% csrf_token %}
  <div id="capture" style="padding: 10px;">
     <center> <button type="submit" id="btn"> Take Screenshot </button>
     <div id="container"></div>
@@ -215,11 +211,6 @@ const capture = () => {
     a.setAttribute('download', 'myImage.png');
     a.setAttribute('href', image);
     a.click();
-
-    var a = document.getElementById("a");
-    var file = new Blob([text], {type: type});
-    a.href = URL.createObjectURL(file);
-    a.download = name;
 
 
   });

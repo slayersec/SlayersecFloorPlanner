@@ -86,6 +86,10 @@ def maps2D(request):
    #
    #  mapdata = mapdata(mapName=name, data=dataset)
    form = UserCreationForm
+   if request.method == 'POST':
+       mapdata = mapdata(mapName='test', data='myImage.png')
+       return redirect(saveGrid)
+       
    return render(request, "main/maps2D.html", context={"formMaps":form})
 
 @login_required
