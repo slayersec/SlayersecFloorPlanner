@@ -170,7 +170,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
- <div id="capture" style="padding: 10px;">
+ <div id="capture2" style="padding: 10px;">
     <center> <button type="submit" id="btn"> Take Screenshot </button>
     <div id="container"></div>
     <form method="POST" >{% csrf_token %}
@@ -200,9 +200,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 const capture = () => {
   const body = document.querySelector('body');
-  body.id = 'capture';
+  body.id = 'capture2';
 
-  html2canvas(document.querySelector("#capture")).then(canvas => {
+  html2canvas(document.querySelector("capture2")).then(canvas => {
     document.body.appendChild(canvas);
 
   }).then(() => {
