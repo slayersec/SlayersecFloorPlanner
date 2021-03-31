@@ -26,6 +26,24 @@ function refreshGrid(){
     createGrid(z);
 };
 
+function allColors() {
+
+    var count = 1;
+        
+            document.querySelectorAll(".grid").forEach(function(a){
+            a.addEventListener("click", setColor)
+            })
+
+            col = [ "#000000", "#0000FF", "#FFFFFF" ];
+
+
+            function setColor() {
+                this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+                    this.style.backgroundColor = col[this.dataset.count%col.length] 
+            }
+
+}
+
 function overBlack() {
     $(".grid").click(function() {
         $(this).css("background-color", "black");
@@ -39,33 +57,10 @@ function overBlue() {
 }
 
 function overWhite() {
-    $(".grid").mouseover(function() {
+    $(".grid").click(function() {
         $(this).css("background-color", "white");
         });
 }
-/*
-function autoFillBlack() {
-
-    $(".onlyBlack").click(function() {
-        mouseOver();
-    })    
-}
-
-function autoFillBlue() {
-
-     $(".onlyBlue").click(function() {
-        mouseOver1();
-    })    
-}
-
-function autoFillWhite() {
-
-    $(".grid").mouseover(function() {
-        $(this).css("background-color", "white");
-        });
-}
-*/
-
 
 
 
@@ -98,6 +93,10 @@ $(document).ready(function() {
             overWhite();
         })
 
+         $(".allColors").click(function() {
+            allColors();
+        })
+
   /*      
         $(".grid").click(function() {
             $(".onlyBlack").click("background-color", "black");
@@ -118,7 +117,7 @@ $(document).ready(function() {
         });
         
 */       
-
+/*
             var count = 1;
         
             document.querySelectorAll(".grid").forEach(function(a){
@@ -132,7 +131,7 @@ $(document).ready(function() {
                 this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
                     this.style.backgroundColor = col[this.dataset.count%col.length] 
             }
-        
+        */
     });
     
 });
