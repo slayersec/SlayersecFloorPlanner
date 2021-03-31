@@ -71,11 +71,15 @@ $(document).ready(function() {
         refreshGrid();
 
         $(".onlyBlack").click(function() {
-            $(this).css("background-color", "black");
+            $(".grid").css("background-color", "black");
         });
 
         $(".onlyBlue").click(function() {
-            $(this).css("background-color", "blue");
+            $(".grid").css("background-color", "blue");
+        });
+
+        $(".onlyWhite").click(function() {
+            $(this).css("background-color", "white");
         });
     
     
