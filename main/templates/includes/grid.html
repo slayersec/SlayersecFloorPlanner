@@ -26,27 +26,37 @@ function refreshGrid(){
     createGrid(z);
 };
 
+function mouseOver() {
+    $(".grid").mouseover(function() {
+        $(this).css("background-color", "black");
+        });
+}
+
+function mouseOver1() {
+    $(".grid").mouseover(function() {
+        $(this).css("background-color", "blue");
+        });
+}
 
 function autoFillBlack() {
 
-    if(".onlyBlack") {
-        $(".grid").click(function() {
-        $(this).css("background-color", "black")
+    $(".onlyBlack").click(function() {
+        mouseOver();
+    })    
+}
+
+function autoFillBlue() {
+
+     $(".onlyBlue").click(function() {
+        mouseOver1();
+    })    
+}
+
+function autoFillWhite() {
+
+    $(".grid").mouseover(function() {
+        $(this).css("background-color", "white");
         });
-
-
-
-
-
-
-    }
-    
-
-
-
-
-
-
 }
 
 
