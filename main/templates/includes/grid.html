@@ -26,15 +26,21 @@ function refreshGrid(){
     createGrid(z);
 };
 
-function mouseOver() {
+function overBlack() {
     $(".grid").mouseover(function() {
         $(this).css("background-color", "black");
         });
 }
 
-function mouseOver1() {
+function overBlue() {
     $(".grid").mouseover(function() {
         $(this).css("background-color", "blue");
+        });
+}
+
+function overWhite() {
+    $(".grid").mouseover(function() {
+        $(this).css("background-color", "white");
         });
 }
 
@@ -81,8 +87,16 @@ $(document).ready(function() {
         refreshGrid();
 
         $(".onlyBlack").click(function() {
-            mouseOver();
-            })
+            overBlack();
+        })
+
+        $(".onlyBlue").click(function() {
+            overBlue();
+        })
+
+        $(".onlyWhite").click(function() {
+            overWhite();
+        })
 
   /*      
         $(".grid").click(function() {
