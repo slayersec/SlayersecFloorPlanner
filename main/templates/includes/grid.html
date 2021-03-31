@@ -27,25 +27,22 @@ function refreshGrid(){
 };
 
 
-function saveMap() {
-    var height = 4;
-    var width = 3;
+function autoFillBlack() {
+    $(".onlyBlack").click(function() {
+        $(this).css("background-color", "black")
+    });
 
-    if($(".saveGrid")) {
-        for (var i = 0; i < width + height; i++) {
-            for (var j = 0; j < height; j++) {
-                var x = width - i + j;
-                if(x < 0 || x >= width) continue;
-                window.print(x,j);
-            
-               // "#FFFFFF" = 0;
-               // "#000000" = 1;
-               // "#0000FF" = 2;
-            };        
-        };
 
-    }
+
+
+
+
 }
+
+
+
+
+
 
 
 // THIS IS WHERE THE DOCUMENT IS READY AND BEGINS EXECUTING
@@ -63,8 +60,6 @@ $(document).ready(function() {
     $(".newGrid").click(function() {
         refreshGrid();
     
-    
-
 /*
         $(".grid").mouseover(function() {
         $(this).css("background-color", "black");
@@ -81,22 +76,6 @@ $(document).ready(function() {
         })
 
         col = [ black, blue, white ];
-
-/*
-        $(".saveGrid").click(function() {
-            if (col = white) {
-                white = 0;
-            }
-            else if (col = black) {
-                black = 1;
-            }
-            else if (col = blue) {
-                blue = 2;
-            }
-        }
-*/
-
-        
 
     function setColor() {
         this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
@@ -115,23 +94,6 @@ var colors = [ "#000000","#0000FF","#FFFFFF" ];
         $(".grid").click(function() {
             $(this).css("background-color", "colors") 
             });
-*/
-
-
-
-/*
-  var count = 1;
-  
-  document.querySelectorAll('.grid').forEach(function(a){
-  a.addEventListener('click', setColor)
-  })
-
-  var col = [ "#000000","#0000FF","#FFFFFF" ];
-  function setColor() {
-  this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
-    this.style.backgroundColor = col[this.dataset.count%col.length] 
-  }
-
 */
 
 
