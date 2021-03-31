@@ -80,7 +80,11 @@ $(document).ready(function() {
     $(".newGrid").click(function() {
         refreshGrid();
 
-        
+        $(".onlyBlack").click(function() {
+            mouseOver();
+            })
+
+  /*      
         $(".grid").click(function() {
             $(".onlyBlack").click("background-color", "black");
         });
@@ -92,35 +96,14 @@ $(document).ready(function() {
         $(".onlyWhite").click(function() {
             $(".grid").css("background-color", "white");
         });
-    
+    */
     
 /*
         $(".grid").mouseover(function() {
         $(this).css("background-color", "black");
         });
         
-
-        if( $(".onlyBlack") ) { 
-            $(".grid").click(function() {
-            $(this).css("background-color", "black")
-            });
-    
-        }
-
-        else if ( $(".onlyBlue") ) {
-            $(".grid").click(function() {
-            $(this).css("background-color", "blue")
-            });
-
-        }
-
-
-
-
-
-        else { 
-
- */       
+*/       
 
             var count = 1;
         
@@ -135,7 +118,7 @@ $(document).ready(function() {
                 this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
                     this.style.backgroundColor = col[this.dataset.count%col.length] 
             }
-        //}
+        
     });
     
 });
