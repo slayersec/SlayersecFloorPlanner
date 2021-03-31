@@ -76,14 +76,14 @@ $(document).ready(function() {
         });
         */
 
-        if(".onlyBlack").click(function(){ {
+        if( $(".onlyBlack") ) { 
             $(".grid").click(function() {
             $(this).css("background-color", "black")
             });
-            });
+    
         }
 
-        else if (".onlyBlue") {
+        else if ( $(".onlyBlue") ) {
             $(".grid").click(function() {
             $(this).css("background-color", "blue")
             });
