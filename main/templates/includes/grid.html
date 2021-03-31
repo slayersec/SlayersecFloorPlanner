@@ -69,12 +69,21 @@ $(document).ready(function() {
 */
     $(".newGrid").click(function() {
         refreshGrid();
+
+        $(".onlyBlack").click(function() {
+            $(this).css("background-color", "black");
+        });
+
+        $(".onlyBlue").click(function() {
+            $(this).css("background-color", "blue");
+        });
+    
     
 /*
         $(".grid").mouseover(function() {
         $(this).css("background-color", "black");
         });
-        */
+        
 
         if( $(".onlyBlack") ) { 
             $(".grid").click(function() {
@@ -93,9 +102,10 @@ $(document).ready(function() {
 
 
 
+
         else { 
 
-        
+ */       
 
             var count = 1;
         
@@ -110,7 +120,7 @@ $(document).ready(function() {
                 this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
                     this.style.backgroundColor = col[this.dataset.count%col.length] 
             }
-        }
+        //}
     });
     
 });
