@@ -27,13 +27,13 @@ function refreshGrid(){
 };
 
 function overBlack() {
-    $(".grid").mouseover(function() {
+    $(".grid").click(function() {
         $(this).css("background-color", "black");
         });
 }
 
 function overBlue() {
-    $(".grid").mouseover(function() {
+    $(".grid").click(function() {
         $(this).css("background-color", "blue");
         });
 }
@@ -43,7 +43,7 @@ function overWhite() {
         $(this).css("background-color", "white");
         });
 }
-
+/*
 function autoFillBlack() {
 
     $(".onlyBlack").click(function() {
@@ -64,7 +64,7 @@ function autoFillWhite() {
         $(this).css("background-color", "white");
         });
 }
-
+*/
 
 
 
@@ -76,7 +76,7 @@ function autoFillWhite() {
 
 // allows the click of a button to prompt the user to create a new grid
 $(document).ready(function() {
-    createGrid(16);
+    //createGrid(16);
     
 /*
     $(".grid").mouseover(function() {
