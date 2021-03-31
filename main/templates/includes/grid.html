@@ -76,9 +76,10 @@ $(document).ready(function() {
         });
         */
 
-        if(".onlyBlack") {
+        if(".onlyBlack").click(function(){ {
             $(".grid").click(function() {
             $(this).css("background-color", "black")
+            });
             });
         }
 
@@ -103,23 +104,13 @@ $(document).ready(function() {
             })
 
             col = [ "#000000", "#0000FF", "#FFFFFF" ];
+
+
+            function setColor() {
+                this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+                    this.style.backgroundColor = col[this.dataset.count%col.length] 
+            }
         }
-
-
-        
-
-
-
-
-
-
-function setColor() {
-    this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
-        this.style.backgroundColor = col[this.dataset.count%col.length] 
-    }
-
-        
-
     });
     
 });
