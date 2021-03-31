@@ -76,21 +76,36 @@ $(document).ready(function() {
         });
         */
 
-        var count = 1;
-        var white = "#FFFFFF";
-        var black = "#000000";
-        var blue = "#0000FF";
-  
-        document.querySelectorAll(".grid").forEach(function(a){
-        a.addEventListener("click", setColor)
-        })
-
-        col = [ black, blue, white ];
-
-    function setColor() {
-        this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
-            this.style.backgroundColor = col[this.dataset.count%col.length] 
+        if(".onlyBlack") {
+            $(".grid").click(function() {
+            $(this).css("background-color", "black")
+            });
         }
+        else { 
+
+        
+
+            var count = 1;
+        
+            document.querySelectorAll(".grid").forEach(function(a){
+            a.addEventListener("click", setColor)
+            })
+
+            col = [ "#000000", "#0000FF", "#FFFFFF" ];
+        }
+
+
+        
+
+
+
+
+
+
+function setColor() {
+    this.dataset.count= this.dataset.count >= 0 ? ++this.dataset.count : 0;
+        this.style.backgroundColor = col[this.dataset.count%col.length] 
+    }
 
         
 
