@@ -70,8 +70,9 @@ $(document).ready(function() {
     $(".newGrid").click(function() {
         refreshGrid();
 
-        $(".onlyBlack").click(function() {
-            $(".grid").click("background-color", "black");
+        
+        $(".grid").click(function() {
+            $(".onlyBlack").click("background-color", "black");
         });
 
         $(".onlyBlue").click(function() {
