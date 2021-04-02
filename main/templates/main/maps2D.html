@@ -125,6 +125,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	display:inline-block;
 }
 
+.btnColorsContainer {
+  border-style: solid; 
+
+
+
+}
 
 </style>
 
@@ -154,15 +160,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <!--  THIS IS WHAT IS CAUSING THE SCREENSHOT TO TAKE -->
 
-<button class="allColors">Swap Between Colors</button>
+<div class="btnColorsContainer">
 
-<button class="onlyBlack">Black</button>
+  <button class="allColors">Swap Between Colors</button>
 
-<button class="onlyBlue">Blue</button>
+  <button class="onlyBlack">Black</button>
 
-<button class="onlyWhite">White</button>
+  <button class="onlyBlue">Blue</button>
 
-<button class="newGrid">New Grid</button>
+  <button class="onlyWhite">White</button>
+</div>
+
+<center><button class="newGrid">New Grid</button></center>
 
 {% include 'includes/grid.html' %}
 
