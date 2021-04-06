@@ -3,8 +3,10 @@
    work together to create what is showing on the physical webpage hence the class name "views"
 """
 from django.shortcuts import render, redirect
+from django.views.generic.edit import UpdateView
+from django.views import generic
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -70,6 +72,13 @@ def homepage(request):
 def profile(request):
    form = UserCreationForm
    return render(request, "main/profile.html", context={"formProfile":form})
+
+
+@login_required
+def editProfile(request):
+    form = UserCreationForm
+    return render(request, "main/profile.html", context={"formProfile":form})
+
 
 @login_required
 def imageUpload(request):
