@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-    'users',
+    'cuser',
     
 
 ]
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'cuser.CUser'
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,

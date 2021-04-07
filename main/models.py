@@ -9,7 +9,7 @@ class mapdata(models.Model):
     mapPublished = models.DateTimeField('date published')
     def __str__(self):
         return self.mapName
-        
+
 class UserManager(BaseUserManager):
 
   def _create_user(self, email, password, is_staff, is_superuser, **extra_fields):
@@ -56,6 +56,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_absolute_url(self):
         return "/users/%i/" % (self.pk)
+
+
 class users(models.Model):
     name = models.ForeignKey('auth.User',on_delete=models.CASCADE)
     image = models.ImageField(blank = True, null = True)
