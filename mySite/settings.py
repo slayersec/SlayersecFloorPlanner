@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-    'users',
+    'User',
     
 
 ]
 
-AUTH_USER_MODEL = "users.User" 
+AUTH_USER_MODEL = "user.User" 
 
 
 TINYMCE_DEFAULT_CONFIG = {
