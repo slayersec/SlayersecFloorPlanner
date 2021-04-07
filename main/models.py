@@ -63,7 +63,7 @@ class users(models.Model):
     image = models.ImageField(blank = True, null = True)
     employeeID = models.TextField()
     role = models.TextField()
-    email = email
+    email = self.normalize_email(email)
     phone = models.TextField()    
     age = models.TextField()
     position = models.TextField()
