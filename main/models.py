@@ -58,21 +58,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         return "/users/%i/" % (self.pk)
 
 
-class users(models.Model):
-    name = models.ForeignKey('auth.User',on_delete=models.CASCADE)
-    image = models.ImageField(blank = True, null = True)
-    employeeID = models.TextField()
-    role = models.TextField()
-    email = self.normalize_email(email)
-    phone = models.TextField()    
-    age = models.TextField()
-    position = models.TextField()
-    records = models.TextField()
-    warnings = models.TextField()
-    notes = models.TextField()
-    userSince = models.DateTimeField(default=timezone.now)
-
-
 
 
 
