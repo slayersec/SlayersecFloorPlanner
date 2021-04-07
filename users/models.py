@@ -3,11 +3,13 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, User
 from django.utils.translation import ugettext_lazy as _
 from .managers import UserManager
+from django.conf import settings
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=254, unique=True)
     #name = models.CharField(max_length=254, null=True, blank=True)
-    name = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+    name = models.ForeignKey('user.User',on_delete=models.CASCADE)
     image = models.ImageField(blank = True, null = True)
     employeeID = models.TextField()
     role = models.TextField()
