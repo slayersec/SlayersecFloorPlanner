@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 ]
 
-#AUTH_USER_MODEL = "user.User" 
+AUTH_USER_MODEL = "users.User" 
 
 
 TINYMCE_DEFAULT_CONFIG = {
