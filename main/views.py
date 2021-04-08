@@ -11,7 +11,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-User = get_user_model()
+
 
 
 # Create your views here.
@@ -43,6 +43,7 @@ def logout_request(request):
     return redirect("main:login")
 
 def register(request):
+    User = get_user_model()
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
