@@ -43,8 +43,8 @@ def logout_request(request):
     return redirect("main:login")
 
 def register(request):
-    User = get_user_model()
     if request.method == "POST":
+        User = get_user_model()
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
