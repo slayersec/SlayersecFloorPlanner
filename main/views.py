@@ -7,12 +7,11 @@ from django.views.generic.edit import UpdateView
 from django.views import generic
 from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm
-from users.forms import CustomUserCreationForm, CustomUserChangeForm
+from users.forms import CustomUserCreationForm, CustomUserChangeForm, ProfileCustomizeForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-from users.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 
