@@ -1,7 +1,3 @@
-"""
-   This page is showing what is actually displayed on the webpage. So stuff like HTML and python can
-   work together to create what is showing on the physical webpage hence the class name "views"
-"""
 from django.shortcuts import render, redirect
 from django.views.generic.edit import UpdateView
 from django.views import generic
@@ -76,9 +72,13 @@ def homepage(request):
 
 # Profile and uploading an image are on the same form
 @login_required
-def displayProfile(request):
+def displayProfile(request, image, employeeID, role, phone, age, position, records, warnings, notes):
    form = UserCreationForm
-   return render(request, "main/displayProfile.html", context={"formProfile":form})
+   return render(request, "main/editProfile.html", context={"formProfile":form} {
+       'User': User.objects.get(employeeID = User_employeeID) 
+
+
+   })
 
 
 @login_required
