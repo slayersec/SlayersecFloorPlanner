@@ -70,9 +70,9 @@ def homepage(request):
 
 # Profile and uploading an image are on the same form
 @login_required
-def displayProfile(request, image, employeeID, role, phone, age, position, records, warnings, notes): 
+def displayProfile(request): 
    return render(request, "main/displayProfile.html", {
-       'User': User.objects.get(employeeID = employeeID) 
+       'displayProfile': User.objects.all() 
 
 
    })

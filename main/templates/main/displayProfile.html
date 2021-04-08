@@ -1,6 +1,8 @@
 {% extends 'main/header.html' %}
 {% csrf_token %}
 {%block content%}
+
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -163,10 +165,7 @@ input[type=text], input[type=number] {
 
         <div style="position:relative; text-align:center;">
 
-            <table style="border: 1px solid black">
-                <tr><td>Employee ID</td><td>{{ User.employeeID }}</td></tr>
-
-            </table>
+           <li> {{ user.employeeID }} </li>
 
             <p> 
             <label for="name"><b>Name</b></label> 
