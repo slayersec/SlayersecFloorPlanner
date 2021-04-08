@@ -70,16 +70,12 @@ def homepage(request):
 
 # Profile and uploading an image are on the same form
 @login_required
-def displayProfile(request, image, employeeID, role, phone, age, position, records, warnings, notes):
-   form = UserCreationForm
-   return render(request, "main/editProfile.html", context={"formProfile":form} {
-       'User': User.objects.get(employeeID = User_employeeID) 
+def displayProfile(request, image, employeeID, role, phone, age, position, records, warnings, notes): 
+   return render(request, "main/displayProfile.html", {
+       'User': User.objects.get(employeeID = employeeID) 
 
 
    })
-def displayProfile(request):
-   return render(request, "main/displayProfile.html", context={"formProfile":form})
-
 
 @login_required
 def editProfile(request):
