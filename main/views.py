@@ -70,13 +70,11 @@ def register(request):
 
 @login_required
 def homepage(request):
-   form = UserCreationForm
    return render(request, "main/homepage.html", context={"formHomepage":form})
 
 # Profile and uploading an image are on the same form
 @login_required
 def displayProfile(request):
-   form = UserCreationForm
    return render(request, "main/displayProfile.html", context={"formProfile":form})
 
 
@@ -93,7 +91,6 @@ def editProfile(request):
 
 @login_required
 def imageUpload(request):
-   form = UserCreationForm
    return render(request, "main/imageUpload.html", context={"formProfile":form})
 
 @login_required
@@ -105,7 +102,6 @@ def maps2D(request):
    #            dataset: (240 character string each being a 0 (floor), 1(wall), or 2(door)).
    #
    #  mapdata = mapdata(mapName=name, data=dataset)
-   form = UserCreationForm
    if request.method == 'POST':
        mapdata = mapdata(mapName='test', data='myImage.png')
        return redirect(saveGrid)
@@ -114,21 +110,17 @@ def maps2D(request):
 
 @login_required
 def mapsView(request):
-   form = UserCreationForm
    return render(request, "main/mapsView.html", context={"formMapsView":form})
 
 @login_required
 def checkcred(request):
-   form = UserCreationForm
    return render(request, "main/checkcred.py", context={"formCheckCred":form})
 
 
 @login_required
 def saveGrid(request):
-   form = UserCreationForm
    return render(request, "main/saveGrid.html", context={"saveGrid":form})
 
 @login_required
 def mapsList(request):
-   form = UserCreationForm
    return render(request, "main/mapsList.html", context={"mapsList":form})
