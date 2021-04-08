@@ -76,9 +76,9 @@ def homepage(request):
 
 # Profile and uploading an image are on the same form
 @login_required
-def profile(request):
+def displayProfile(request):
    form = UserCreationForm
-   return render(request, "main/profile.html", context={"formProfile":form})
+   return render(request, "main/displayProfile.html", context={"formProfile":form})
 
 
 @login_required

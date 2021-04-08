@@ -1,19 +1,6 @@
 {% extends 'main/header.html' %}
 {% csrf_token %}
 {%block content%}
-
-<style>
-
-#selectedFiles img {
-	max-width: 125px;
-	max-height: 125px;
-	float: left;
-	margin-bottom:10px;
-}
-
-</style>
-
-
  
 <body>
 
@@ -23,14 +10,14 @@
 
         <!-- This is the button for "Choose Files"-->
 
-        Files: <input type="file" id="files" name="files" multiple accept="image/*"><br/>
+        Files: <input type="file" id="files" name="files" multiple><br/>
 
-        <!------------------------------------------------------------------->
+    <!------------------------------------------------------------------->
+
 
         <div id="selectedFiles"></div>
 
         <input type="submit">
-
 	</form>
 
 
@@ -49,28 +36,19 @@
 		
 	function handleFileSelect(e) {
 		
-		if(!e.target.files || !window.FileReader) return;
-
+		if(!e.target.files) return;
+		
 		selDiv.innerHTML = "";
 		
 		var files = e.target.files;
-		var filesArr = Array.prototype.slice.call(files);
-		filesArr.forEach(function(f) {
+		for(var i=0; i<files.length; i++) {
 			var f = files[i];
-			if(!f.type.match("image.*")) {
-				return;
-			}
+			
+			selDiv.innerHTML += f.name + "<br/>";
 
-			var reader = new FileReader();
-			reader.onload = function (e) {
-				var html = "<img src=\"" + e.target.result + "\">" + f.name + "<br clear=\"left\"/>";
-				selDiv.innerHTML += html;				
-			}
-			reader.readAsDataURL(f); 
-		});
+		}
 		
 	}
-    
 	</script>
 
 </body>

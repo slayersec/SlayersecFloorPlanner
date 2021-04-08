@@ -124,40 +124,40 @@ input[type=text], input[type=number] {
   <!-- This is the html for the upload image -->
 
     <form action="/action_page">
-    <div class="containerProfile">
-        <h1><center> Profile </center> </h1>
-        <br>
-    
-        <div align = "left">
-          <div class="image-upload-one">
-            <div class="center">
-              <div class="form-input">
-                <label for="file-ip-1">
-                  <img id="file-ip-1-preview" src="/static/imageUploadIcon.png">
-                  <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()"></button>
-                </label>
-                <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+      <div class="containerProfile">
+          <h1><center> Profile </center> </h1>
+          <br>
+      
+          <div align = "left">
+            <div class="image-upload-one">
+              <div class="center">
+                <div class="form-input">
+                  <label for="file-ip-1">
+                    <img id="file-ip-1-preview" src="/static/imageUploadIcon.png">
+                    <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()"></button>
+                  </label>
+                  <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+                </div>
+                <small class="small"> Click on the space above to upload an image</small>
               </div>
-              <small class="small"> Click on the space above to upload an image</small>
             </div>
-          </div>
-            
-          <script>
+              
+            <script>
 
-            function showPreviewOne(event){
-              if(event.target.files.length > 0){
-                let src = URL.createObjectURL(event.target.files[0]);
-                let preview = document.getElementById("file-ip-1-preview");
-                preview.src = src;
-                preview.style.display = "block";
-              } 
-            }
-            function myImgRemoveFunctionOne() {
-              document.getElementById("file-ip-1-preview").src = "/static/imageUploadIcon.png";
-            }
+              function showPreviewOne(event){
+                if(event.target.files.length > 0){
+                  let src = URL.createObjectURL(event.target.files[0]);
+                  let preview = document.getElementById("file-ip-1-preview");
+                  preview.src = src;
+                  preview.style.display = "block";
+                } 
+              }
+              function myImgRemoveFunctionOne() {
+                document.getElementById("file-ip-1-preview").src = "/static/imageUploadIcon.png";
+              }
 
-          </script>
-    </div>
+            </script>
+      </div>
     
         <!-- This is the placement of all the stuff stuff -->
 
