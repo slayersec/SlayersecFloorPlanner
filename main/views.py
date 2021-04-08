@@ -84,7 +84,7 @@ def profile(request):
 @login_required
 def editProfile(request):
     form = UserCreationForm
-    return render(request, "main/profile.html", context={"formProfile":form})
+    return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
 
 @login_required
