@@ -116,7 +116,7 @@ input[type=text], input[type=number] {
   <div class="container">
     <div class="topnav"> 
 		<a href="/homepage">Homepage</a>
-		<a href="/profile">Profile</a>
+		<a href="/editProfile">Profile</a>
 		<a href="/mapsView">Maps</a>
     </div>
   </div>
@@ -125,7 +125,7 @@ input[type=text], input[type=number] {
 
     <form action="/action_page">
     <div class="containerProfile">
-        <h1><center> Profile </center> </h1>
+        <h1><center> {{user.username|title}}'s Profile </a> </center> </h1>
         <br>
     
         <div align = "left">
@@ -225,6 +225,9 @@ input[type=text], input[type=number] {
             <button type="submit" class="savebtn">Save</button> <br>
         </div>      
     
+<label for="warning"><b>My testing area...</b></label>
+{% csrf_token %}
+{{form.as_p}}
 </body>
 {%endblock%}
 

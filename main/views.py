@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from users.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from django.shortcuts import get_object_or_404
 
 
 
@@ -49,7 +49,7 @@ def logout_request(request):
 def register(request):
     if request.method == "POST":
         User = get_user_model()
-        form = UserCreationForm(request.POST)
+        form = User.UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -83,9 +83,15 @@ def profile(request):
 
 @login_required
 def editProfile(request):
-    form = UserCreationForm
-    return render(request, "main/editProfile.html", context={"formEditProfile":form})
+    if request.method == 'POST':
+        form = users.forms(UserChangeForm)
+        return redirect("main:homepage")
+    else:
+        return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
+@login_required
+def displayProfile(request, employeeID):
+    return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
 @login_required
 def imageUpload(request):

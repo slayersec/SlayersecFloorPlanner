@@ -32,7 +32,10 @@ urlpatterns = [
     path("maps2D", views.maps2D, name="maps2D"),
     path("mapsView", views.mapsView, name="mapsView"),
     path("saveGrid", views.saveGrid, name="saveGrid"),
-    path("mapsList", views.mapsList, name="mapsList")
+    path("mapsList", views.mapsList, name="mapsList"),
+
+    #Dynamic Users...
+    path('profile/<int:user_id>/', views.displayProfie)
 
 
 
