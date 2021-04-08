@@ -49,7 +49,7 @@ def logout_request(request):
 def register(request):
     if request.method == "POST":
         User = get_user_model()
-        form = User.CustomUserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
