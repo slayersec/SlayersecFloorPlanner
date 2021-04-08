@@ -81,12 +81,12 @@ def displayProfile(request):
 @login_required
 def editProfile(request):
     if request.method == 'POST':
-        form = CustomUserChangeForm(request.POST)
+        form = ProfileCustomizeForm(request.POST)
         if form.is_valid():
             form.save()  # this will save Car info to database
             return HttpResponse('Data added to database')
     else:  # display empty form
-        form = CustomUserChangeForm()
+        form = ProfileCustomizeForm()
     return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
 @login_required
