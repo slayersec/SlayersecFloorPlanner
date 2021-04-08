@@ -70,7 +70,7 @@ def register(request):
 
 @login_required
 def homepage(request):
-   return render(request, "main/homepage.html", context={"formHomepage":form})
+   return render(request, "main/homepage.html")
 
 # Profile and uploading an image are on the same form
 @login_required
