@@ -121,3 +121,8 @@ def checkcred(request):
 def saveGrid(request):
    form = UserCreationForm
    return render(request, "main/saveGrid.html", context={"saveGrid":form})
+
+@login_required
+def mapsList(request):
+   form = UserCreationForm
+   return render(request, "main/mapsList.html", context={"mapsList":form})
