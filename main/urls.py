@@ -35,9 +35,6 @@ urlpatterns = [
     path("saveGrid", views.saveGrid, name="saveGrid"),
     path("mapsList", views.mapsList, name="mapsList"),
 
-    #Dynamic Users...
-    path('profile/<int:user_id>/', views.displayProfie)
-
 
 
 
