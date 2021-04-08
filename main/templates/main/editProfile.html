@@ -128,39 +128,11 @@ input[type=text], input[type=number] {
         <h1><center> {{user.name|title}}'s Profile </a> </center> </h1>
         <br>
     
-        <div align = "left">
-          <div class="image-upload-one">
-            <div class="center">
-              <div class="form-input">
-                <label for="file-ip-1">
-                  <img id="file-ip-1-preview" src="/static/imageUploadIcon.png">
-                  <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()"></button>
-                </label>
-                <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
-              </div>
-            </div>
-              
-            <script>
-
-              function showPreviewOne(event){
-                if(event.target.files.length > 0){
-                  let src = URL.createObjectURL(event.target.files[0]);
-                  let preview = document.getElementById("file-ip-1-preview");
-                  preview.src = src;
-                  preview.style.display = "block";
-                } 
-              }
-              function myImgRemoveFunctionOne() {
-                document.getElementById("file-ip-1-preview").src = "/static/imageUploadIcon.png";
-              }
-
-            </script>
-      </div>
-    
         <!-- This is the placement of all the stuff stuff -->
 
         <div style="position:relative; text-align:center;">
-        <label for="warning"><b>My testing area...</b></label>
+        <label for="warning"><b>Employees may only edit personal information.</b></label>
+        <label for="warning"><b>To change your password or address any info on the display profile page, please consult your supervisor</b></label>
             <h1><center> Data Page </center> </h1>
             <hr>
             {% csrf_token %}
