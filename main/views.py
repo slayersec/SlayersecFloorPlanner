@@ -72,7 +72,7 @@ def homepage(request):
 @login_required
 def displayProfile(request): 
    return render(request, "main/displayProfile.html", {
-       'displayProfile': User.objects.all() 
+       'displayProfile': UserManager.objects.all() 
 
 
    })
