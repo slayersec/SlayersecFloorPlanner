@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = "users.User" 
+AUTHENTICATION_BACKENDS = ['utils.custom_authentication.CustomBackend', ]
 
 
 TINYMCE_DEFAULT_CONFIG = {
