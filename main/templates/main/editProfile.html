@@ -133,7 +133,6 @@ input[type=text], input[type=number] {
         <div style="position:relative; text-align:center;">
         <label for="warning"><b>Employees may only edit personal information.</b></label>
         <label for="warning"><b>To change your password or address any info on the display profile page, please consult your supervisor</b></label>
-            <h1><center> Data Page </center> </h1>
             <hr>
             {% csrf_token %}
             {{form.as_p}}
