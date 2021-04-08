@@ -12,8 +12,9 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
+from users.forms import UserCreationForm
 from django.contrib.auth.models import User
-User = get_user_model()
+
 
 
 
@@ -47,6 +48,7 @@ def logout_request(request):
 
 def register(request):
     if request.method == "POST":
+        User = get_user_model()
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
