@@ -87,7 +87,7 @@ def editProfile(request):
             return HttpResponse('Data added to database')
     else:  # display empty form
         form = ProfileCustomizeForm()
-    return render(request, "main/editProfile.html", context={"formEditProfile":form})
+    return render(request, "main/editProfile.html", context={"form":form})
 
 @login_required
 def imageUpload(request):
