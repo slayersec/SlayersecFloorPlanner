@@ -6,7 +6,8 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import UpdateView
 from django.views import generic
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
+from users.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
