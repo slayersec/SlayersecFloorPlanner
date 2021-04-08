@@ -116,7 +116,7 @@ input[type=text], input[type=number] {
   <div class="container">
     <div class="topnav"> 
 		<a href="/homepage">Homepage</a>
-		<a href="/profile">Profile</a>
+		<a href="/editProfile">Profile</a>
 		<a href="/mapsView">Maps</a>
     </div>
   </div>
@@ -124,6 +124,7 @@ input[type=text], input[type=number] {
   <!-- This is the html for the upload image -->
 
     <form action="/action_page">
+<<<<<<< HEAD
       <div class="containerProfile">
           <h1><center> Profile </center> </h1>
           <br>
@@ -139,6 +140,21 @@ input[type=text], input[type=number] {
                   <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
                 </div>
                 <small class="small"> Click on the space above to upload an image</small>
+=======
+    <div class="containerProfile">
+        <h1><center> {{user.name|title}}'s Profile </a> </center> </h1>
+        <br>
+    
+        <div align = "left">
+          <div class="image-upload-one">
+            <div class="center">
+              <div class="form-input">
+                <label for="file-ip-1">
+                  <img id="file-ip-1-preview" src="/static/imageUploadIcon.png">
+                  <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()"></button>
+                </label>
+                <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+>>>>>>> 8344333d3fb95310b347a03f7485ba334719b58e
               </div>
             </div>
               
@@ -225,6 +241,13 @@ input[type=text], input[type=number] {
             <button type="submit" class="savebtn">Save</button> <br>
         </div>      
     
+<label for="warning"><b>My testing area...</b></label>
+    <h1><center> Data Page </center> </h1>
+    <hr>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <hr>
 </body>
 {%endblock%}
 

@@ -28,11 +28,15 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("homepage", views.homepage, name="homepage"),
     path("editProfile", views.editProfile, name="editProfile"),
+    path("displayProfile", views.displayProfile, name="displayProfile"),
     path("imageUpload", views.imageUpload, name="imageUpload"),
     path("maps2D", views.maps2D, name="maps2D"),
     path("mapsView", views.mapsView, name="mapsView"),
     path("saveGrid", views.saveGrid, name="saveGrid"),
-    path("mapsList", views.mapsList, name="mapsList")
+    path("mapsList", views.mapsList, name="mapsList"),
+
+    #Dynamic Users...
+    path('profile/<int:user_id>/', views.displayProfie)
 
 
 

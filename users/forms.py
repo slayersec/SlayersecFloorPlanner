@@ -8,13 +8,14 @@ from .models import User
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
-        User = get_user_model()
+        model = User
         fields = ('email', 'name', 'image','employeeID', 'role', 'phone', 'age', 'position', 'records', 'warnings', 'notes')
+    
 
 
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
-        User = get_user_model()
         model = User
         fields = ('email', 'name', 'image','employeeID', 'role', 'phone', 'age', 'position', 'records', 'warnings', 'notes')
+        
