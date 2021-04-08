@@ -28,6 +28,7 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("homepage", views.homepage, name="homepage"),
     path("editProfile", views.editProfile, name="editProfile"),
+    path("displayProfile", views.displayProfile, name="displayProfile"),
     path("imageUpload", views.imageUpload, name="imageUpload"),
     path("maps2D", views.maps2D, name="maps2D"),
     path("mapsView", views.mapsView, name="mapsView"),

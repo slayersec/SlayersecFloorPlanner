@@ -125,7 +125,7 @@ input[type=text], input[type=number] {
 
     <form action="/action_page">
     <div class="containerProfile">
-        <h1><center> {{user.username|title}}'s Profile </a> </center> </h1>
+        <h1><center> {{user.name|title}}'s Profile </a> </center> </h1>
         <br>
     
         <div align = "left">
@@ -226,8 +226,12 @@ input[type=text], input[type=number] {
         </div>      
     
 <label for="warning"><b>My testing area...</b></label>
-{% csrf_token %}
-{{form.as_p}}
+    <h1><center> Data Page </center> </h1>
+    <hr>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <hr>
 </body>
 {%endblock%}
 
