@@ -4,9 +4,12 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.utils.translation import ugettext_lazy as _
 from .managers import UserManager
 from django.conf import settings
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    User = get_user_model()
     email = models.EmailField(max_length=254, unique=True)
     name = models.CharField(max_length=254, null=True, blank=True)
     #name = models.ForeignKey('user.User',on_delete=models.CASCADE)
