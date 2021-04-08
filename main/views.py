@@ -90,7 +90,7 @@ def editProfile(request):
         return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
 @login_required
-def displayProfile(request, employeeID):
+def displayProfile(request):
     return render(request, "main/editProfile.html", context={"formEditProfile":form})
 
 @login_required
