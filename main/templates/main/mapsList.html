@@ -4,20 +4,37 @@
 
 <style>
 
+#selectedFiles img {
+	max-width: 125px;
+	max-height: 125px;
+	float: left;
+	margin-bottom:10px;
+}
+
 </style>
 
 
  
 <body>
-	
-	<form id="myForm" method="post" enctype="multipart/form-data">
 
-        Files: <input type="file" id="files" name="files" multiple><br/>
+<!-- This is the form for the Choosing of files buttons and prompts -->
+	
+<form id="myForm" method="post" enctype="multipart/form-data">
+
+        <!-- This is the button for "Choose Files"-->
+
+        Files: <input type="file" id="files" name="files" multiple accept="image/*"><br/>
+
+        <!------------------------------------------------------------------->
 
         <div id="selectedFiles"></div>
 
         <input type="submit">
+
 	</form>
+
+
+<!-- This is the script for the -->
 
 	<script>
 
@@ -32,19 +49,28 @@
 		
 	function handleFileSelect(e) {
 		
-		if(!e.target.files) return;
-		
+		if(!e.target.files || !window.FileReader) return;
+
 		selDiv.innerHTML = "";
 		
 		var files = e.target.files;
-		for(var i=0; i<files.length; i++) {
+		var filesArr = Array.prototype.slice.call(files);
+		filesArr.forEach(function(f) {
 			var f = files[i];
-			
-			selDiv.innerHTML += f.name + "<br/>";
+			if(!f.type.match("image.*")) {
+				return;
+			}
 
-		}
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var html = "<img src=\"" + e.target.result + "\">" + f.name + "<br clear=\"left\"/>";
+				selDiv.innerHTML += html;				
+			}
+			reader.readAsDataURL(f); 
+		});
 		
 	}
+    
 	</script>
 
 </body>
