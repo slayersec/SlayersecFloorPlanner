@@ -45,7 +45,7 @@ def logout_request(request):
 
 def register(request):
     if request.method == "POST":
-        form = CustomUserCreationForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -60,7 +60,7 @@ def register(request):
                           template_name = "main/register.html",
                           context={"form":form})
 
-    form = CustomUserCreationForm
+    form = UserCreationForm
     return render(request = request,
                   template_name = "main/register.html",
                   context={"form":form})
