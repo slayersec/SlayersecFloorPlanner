@@ -6,12 +6,15 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import UpdateView
 from django.views import generic
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
+from users.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-User = get_user_model()
+from users.forms import UserCreationForm
+from django.contrib.auth.models import User
+
 
 
 
@@ -45,6 +48,7 @@ def logout_request(request):
 
 def register(request):
     if request.method == "POST":
+        User = get_user_model()
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
@@ -119,3 +123,8 @@ def checkcred(request):
 def saveGrid(request):
    form = UserCreationForm
    return render(request, "main/saveGrid.html", context={"saveGrid":form})
+
+@login_required
+def mapsList(request):
+   form = UserCreationForm
+   return render(request, "main/mapsList.html", context={"mapsList":form})
