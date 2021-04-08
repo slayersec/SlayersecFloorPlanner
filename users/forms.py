@@ -13,7 +13,7 @@ class CustomUserCreationForm(UserCreationForm):
     
 
 class ProfileCustomizeForm(UserChangeForm):
-    class Meta(ModelForm):
+    class Meta(UserChangeForm):
         model = User
         fields = ('email', 'name', 'image','employeeID', 'role', 'phone', 'age')
 
