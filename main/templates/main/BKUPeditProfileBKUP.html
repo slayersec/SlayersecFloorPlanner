@@ -160,15 +160,74 @@ input[type=text], input[type=number] {
         <!-- This is the placement of all the stuff stuff -->
 
         <div style="position:relative; text-align:center;">
-        <label for="warning"><b>My testing area...</b></label>
-            <h1><center> Data Page </center> </h1>
-            <hr>
-            {% csrf_token %}
-            {{form.as_p}}
+
+            <p> 
+            <label for="name"><b>Name</b></label> 
+                <input type="text" placeholder="Name" name="name" id="name" required>
+            </p>
+    
+            <p>
+            <label for="employeeID"><b>EmployeeID</b></label>
+                <input type="text" placeholder="EmployeeID" name="employeeID" id="employeeID" required>
+                <br>
+            </p>
+
+            <p>
+            <label for="role"><b>Role</b></label>
+                <input type="text" placeholder="Role" name="role" id="role" required>
+                <br>
+            </p>
+
+                 <p> 
+                <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                    <br>
+                </p>
+
+                <p> 
+                <label for="Phone#"><b>Phone#</b></label>
+                    <input type="text" placeholder="Enter Phone#" name="Phone#" id="Phone#" required>
+                    <br>
+                </p>
+            
+                <p>
+                <label for="age"><b>Age</b></label>
+                    <input type="number" placeholder="Age" name="age" id="age" required>
+                    <br>
+                </p>
+
+                <p>
+                <label for="position"><b>Position</b></label>
+                    <input type="text" placeholder="Position" name="position" id="position" required>
+                    <br>
+                </p>
+
+                <p>
+                <label for="records"><b>Records</b></label>
+                    <input type="text" placeholder="Records" name="records" id="records" required>
+                    <br>
+                </p>
+
+                <p>
+                <label for="warning"><b>Warning</b></label>
+                    <input type="text" placeholder="Warning" name="warning" id="warning" required>
+                    <br>
+                </p>
+
+            <p>
+            <label for="notes"><b>Notes</b></label> <br>
+                <textarea id="notes" name="notes" rows="20" cols="100"></textarea>
+                <br>
+            </p>
+
             <button type="submit" class="savebtn">Save</button> <br>
         </div>      
     
-
+<label for="warning"><b>My testing area...</b></label>
+    <h1><center> Data Page </center> </h1>
+    <hr>
+    {% csrf_token %}
+    {{form.as_p}}
 
     <hr>
 </body>
