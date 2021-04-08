@@ -3,12 +3,11 @@ from django.views.generic.edit import UpdateView
 from django.views import generic
 from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm
-from users.forms import CustomUserCreationForm, CustomUserChangeForm
+from users.forms import CustomUserCreationForm, CustomUserChangeForm, ProfileCustomizeForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-from users.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 
@@ -45,7 +44,7 @@ def logout_request(request):
 def register(request):
     if request.method == "POST":
         User = get_user_model()
-        form = User.CustomUserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -67,8 +66,7 @@ def register(request):
 
 @login_required
 def homepage(request):
-   form = UserCreationForm
-   return render(request, "main/homepage.html", context={"formHomepage":form})
+   return render(request, "main/homepage.html")
 
 # Profile and uploading an image are on the same form
 @login_required
@@ -79,22 +77,23 @@ def displayProfile(request, image, employeeID, role, phone, age, position, recor
 
 
    })
+def displayProfile(request):
+   return render(request, "main/displayProfile.html", context={"formProfile":form})
 
 
 @login_required
 def editProfile(request):
     if request.method == 'POST':
-        form = CustomUserChangeForm(request.POST)
+        form = ProfileCustomizeForm(request.POST)
         if form.is_valid():
             form.save()  # this will save Car info to database
             return HttpResponse('Data added to database')
     else:  # display empty form
-        form = CustomUserChangeForm()
-    return render(request, "main/editProfile.html", context={"formEditProfile":form})
+        form = ProfileCustomizeForm()
+    return render(request, "main/editProfile.html", context={"form":form})
 
 @login_required
 def imageUpload(request):
-   form = UserCreationForm
    return render(request, "main/imageUpload.html", context={"formProfile":form})
 
 @login_required
@@ -106,7 +105,6 @@ def maps2D(request):
    #            dataset: (240 character string each being a 0 (floor), 1(wall), or 2(door)).
    #
    #  mapdata = mapdata(mapName=name, data=dataset)
-   form = UserCreationForm
    if request.method == 'POST':
        mapdata = mapdata(mapName='test', data='myImage.png')
        return redirect(saveGrid)
@@ -115,21 +113,17 @@ def maps2D(request):
 
 @login_required
 def mapsView(request):
-   form = UserCreationForm
    return render(request, "main/mapsView.html", context={"formMapsView":form})
 
 @login_required
 def checkcred(request):
-   form = UserCreationForm
    return render(request, "main/checkcred.py", context={"formCheckCred":form})
 
 
 @login_required
 def saveGrid(request):
-   form = UserCreationForm
    return render(request, "main/saveGrid.html", context={"saveGrid":form})
 
 @login_required
 def mapsList(request):
-   form = UserCreationForm
    return render(request, "main/mapsList.html", context={"mapsList":form})
