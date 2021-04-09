@@ -32,7 +32,6 @@ urlpatterns = [
     path("imageUpload", views.imageUpload, name="imageUpload"),
     path("maps2D", views.maps2D, name="maps2D"),
     path("mapsView", views.mapsView, name="mapsView"),
-    path("saveGrid", views.saveGrid, name="saveGrid"),
     path("mapsList", views.mapsList, name="mapsList"),
 
 

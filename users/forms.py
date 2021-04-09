@@ -14,10 +14,12 @@ class CustomUserCreationForm(UserCreationForm):
 
 class ProfileCustomizeForm(UserChangeForm):
     password = None
+    email = None
+    name = None
 
     class Meta(UserChangeForm):
         model = User
-        fields = ('email', 'image', 'role', 'phone', 'age')
+        fields = ('image', 'role', 'phone', 'age', 'notes')
 
 
 class CustomUserChangeForm(UserChangeForm):

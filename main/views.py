@@ -44,7 +44,7 @@ def logout_request(request):
 def register(request):
     if request.method == "POST":
         User = get_user_model()
-        form = CustomUserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST, instance=request.user)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -59,7 +59,7 @@ def register(request):
                           template_name = "main/register.html",
                           context={"form":form})
 
-    form = CustomUserCreationForm
+    form = CustomUserCreationForm(instance=request.user)
     return render(request = request,
                   template_name = "main/register.html",
                   context={"form":form})
@@ -72,23 +72,24 @@ def homepage(request):
 @login_required
 def displayProfile(request): 
    return render(request, "main/displayProfile.html")
-   
-   #, {'displayProfile': User.objects.all() })
+
 
 @login_required
 def editProfile(request):
     if request.method == 'POST':
-        form = ProfileCustomizeForm(request.POST)
+        form = ProfileCustomizeForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
-            form.save()  # this will save Car info to database
-            return HttpResponse('Data added to database')
+            form.save()
+            messages.success(request,'Your Profile has been updated!')
+            return redirect('main:homepage')
     else:  # display empty form
-        form = ProfileCustomizeForm()
+        form = ProfileCustomizeForm(instance=request.user)
     return render(request, "main/editProfile.html", context={"form":form})
 
 @login_required
 def imageUpload(request):
-   return render(request, "main/imageUpload.html", context={"formProfile":form})
+   return render(request, "main/imageUpload.html")
+
 
 @login_required
 def maps2D(request):
@@ -103,21 +104,16 @@ def maps2D(request):
        mapdata = mapdata(mapName='test', data='myImage.png')
        return redirect(saveGrid)
        
-   return render(request, "main/maps2D.html", context={"formMaps":form})
+   return render(request, "main/maps2D.html")
 
 @login_required
 def mapsView(request):
-   return render(request, "main/mapsView.html", context={"formMapsView":form})
+   return render(request, "main/mapsView.html")
 
 @login_required
 def checkcred(request):
-   return render(request, "main/checkcred.py", context={"formCheckCred":form})
-
-
-@login_required
-def saveGrid(request):
-   return render(request, "main/saveGrid.html", context={"saveGrid":form})
+   return render(request, "main/checkcred.py")
 
 @login_required
 def mapsList(request):
-   return render(request, "main/mapsList.html", context={"mapsList":form})
+   return render(request, "main/mapsList.html")
