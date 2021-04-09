@@ -72,16 +72,16 @@ def homepage(request):
 @login_required
 def displayProfile(request): 
    return render(request, "main/displayProfile.html")
-   
-   #, {'displayProfile': User.objects.all() })
+
 
 @login_required
 def editProfile(request):
     if request.method == 'POST':
         form = ProfileCustomizeForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()  # this will save Car info to database
-            return HttpResponse('Data added to database')
+            form.save()
+            messages.success(request,'Your Profile has been updated!')
+            return redirect('main:homepage')
     else:  # display empty form
         form = ProfileCustomizeForm()
     return render(request, "main/editProfile.html", context={"form":form})

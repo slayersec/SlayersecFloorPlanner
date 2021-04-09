@@ -14,6 +14,8 @@ class CustomUserCreationForm(UserCreationForm):
 
 class ProfileCustomizeForm(UserChangeForm):
     password = None
+    email = None
+    name = None
 
     class Meta(UserChangeForm):
         model = User
