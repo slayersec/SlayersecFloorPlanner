@@ -130,9 +130,9 @@ input[type=text], input[type=number] {
         <h1><center> Profile </center> </h1>
         <br>
           {% for user in users %}
-         <label for="warning"><b>{{ user }}.</b></label>
-          <label for="warning"><b>{{ user.name }}.</b></label>
-          <label for="warning"><b>{{ user.address }}.</b></label>
+         <label for="warning"><b>{{ user|title }}.</b></label>
+          <label for="warning"><b>{{ user.name|title }}.</b></label>
+          <label for="warning"><b>{{ user.address|title }}.</b></label>
         <li>{{ user }}</li>
         <li>{{ user.name }}</li>
         <li>{{ user.address }}</li>
