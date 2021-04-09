@@ -140,6 +140,8 @@ input[type=text], input[type=number] {
         <h1 style="font-size:18px"><center> Notes: {{ user.notes|title }} </center> </h1>
         <h1  style="font-size:18px"><center> Staff since {{ user.userSince|title }} </center> </h1>
         <img src = {{ user.image }} >
+
+        <button href="/editProfile">Edit Profile</button>
 </div>
 
 
@@ -151,7 +153,7 @@ input[type=text], input[type=number] {
         <li>{{ user }}</li>
         <li>{{ user.name }}</li>
         <li>{{ user.address }}</li>
-        <!-- {% endfor %} -->
+        <!-- {% endfor %} 
         <div align = "left">
           <div class="image-upload-one">
             <div class="center">
@@ -180,10 +182,10 @@ input[type=text], input[type=number] {
               document.getElementById("file-ip-1-preview").src = "/static/imageUploadIcon.png";
             }
 
-          </script>
+          </script> -->
     </div>
     
-        <!-- This is the placement of all the stuff stuff -->
+        <!-- This is the placement of all the stuff stuff 
 
         <div style="position:relative; text-align:center;">
 
@@ -249,7 +251,8 @@ input[type=text], input[type=number] {
             </p>
 
             <button type="submit" class="savebtn">Save</button> <br>
-        </div>      
+        </div>    
+        -->  
   
 </body>
 {%endblock%}
