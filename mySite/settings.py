@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     
 
 ]
-
+USERNAME_FIELD = 'email'
 AUTH_USER_MODEL = "users.User" 
 #AUTHENTICATION_BACKENDS = ['utils.custom_authentication.CustomBackend', ]
 
