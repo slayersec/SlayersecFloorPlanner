@@ -229,6 +229,9 @@ input[type=text], input[type=number] {
             <button type="submit" class="savebtn">Save</button> <br>
         </div>      
     {% for user in users %}
+    <label for="warning"><b>{{ user }}.</b></label>
+    <label for="warning"><b>{{ user.name }}.</b></label>
+    <label for="warning"><b>{{ user.address }}.</b></label>
     <li>{{ user }}</li>
     <li>{{ user.name }}</li>
     <li>{{ user.address }}</li>
