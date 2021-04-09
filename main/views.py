@@ -71,11 +71,9 @@ def homepage(request):
 # Profile and uploading an image are on the same form
 @login_required
 def displayProfile(request): 
-   return render(request, "main/displayProfile.html", {
-       'displayProfile': UserManager.objects.all() 
-
-
-   })
+   return render(request, "main/displayProfile.html")
+   
+   #, {'displayProfile': User.objects.all() })
 
 @login_required
 def editProfile(request):
