@@ -117,27 +117,36 @@ input[type=text], input[type=number] {
 
   <div class="container">
     <div class="topnav"> 
+<<<<<<< HEAD
 		<a href="/homepage">Homepage</a>
 		<a href="/profile">Profile</a>
 		<a href="/maps2D">Maps</a>
+=======
+      <a href="/homepage">Homepage</a>
+      <a href="/editProfile">Profile</a>
+      <a href="/mapsView">Maps</a>
+      <a href="/displayProfile">Your Profile</a>
+>>>>>>> ef88b8276e20731b54ba8ca5bc0fb1d6b100b552
     </div>
   </div>
   
   <!-- This is the html for the upload image -->
 
+
+<div>
     <form action="/action_page">
-    <div class="containerProfile">
-        <h1><center> {{ user.name|title }} </center> </h1>
-        <h1><center> Your role is {{ user.role|title }} </center> </h1>
-        <h1><center> Your position is {{ user.position|title }} </center> </h1>
-        <h1><center> Phone{{ user.phone|title }} </center> </h1>
-        <h1><center> age{{ user.age|title }} </center> </h1>
-        <h1><center> Records:{{ user.records|title }} </center> </h1>
-        <h1><center> warnings: {{ user.warnings|title }} </center> </h1>
-        <h1><center> Notes: {{ user.notes|title }} </center> </h1>
-        <h1><center> Staff since {{ user.userSince|title }} </center> </h1>
-
-
+    <div style="border:3px; border-style:solid" class="containerProfile">
+        <h1 style=" font-size:18px"><center> {{ user.name|title }} </center> </h1>
+        <h1 style="font-size:18px"><center> Your role is {{ user.role|title }} </center> </h1>
+        <h1 style="font-size:18px"><center> Your position is {{ user.position|title }} </center> </h1>
+       <h1 style="font-size:18px"><center> Phone{{ user.phone|title }} </center> </h1>
+        <h1 style="font-size:18px"><center> age{{ user.age|title }} </center> </h1>
+       <h1 style="font-size:18px"><center> Records:{{ user.records|title }} </center> </h1>
+       <h1 style="font-size:18px"><center> warnings: {{ user.warnings|title }} </center> </h1>
+        <h1 style="font-size:18px"><center> Notes: {{ user.notes|title }} </center> </h1>
+        <h1  style="font-size:18px"><center> Staff since {{ user.userSince|title }} </center> </h1>
+        <img src = {{ user.image }} >
+</div>
 
 
         <br>
