@@ -77,13 +77,13 @@ def displayProfile(request):
 @login_required
 def editProfile(request):
     if request.method == 'POST':
-        form = ProfileCustomizeForm(request.POST, request.FILES)
+        form = ProfileCustomizeForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()
             messages.success(request,'Your Profile has been updated!')
             return redirect('main:homepage')
     else:  # display empty form
-        form = ProfileCustomizeForm()
+        form = ProfileCustomizeForm(instance=request.user)
     return render(request, "main/editProfile.html", context={"form":form})
 
 @login_required
