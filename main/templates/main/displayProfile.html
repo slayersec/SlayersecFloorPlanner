@@ -77,9 +77,23 @@ input[type=text], input[type=number] {
     </div>
   </div>
   
-  <!-- This is the html for the upload image -->
 
 
+  <div>
+    <form action="/action_page">
+    <div style="border:3px; border-style:solid" class="containerProfile">
+        <h1 style="border:3px; border-style:outset; font-size:18px"><left> {{ user.name|title }} </left> </h1>
+        <h1 style="border:3px; border-style:outset; font-size:18px"><left> Your role is: {{ user.role|title }} </left> </h1>
+        <h1 style="border:3px; border-style:outset; font-size:18px"><left> Your position is: {{ user.position|title }} </left> </h1>
+       <h1 style="border:3px; border-style:outset; font-size:18px"><left> Phone:{{ user.phone|title }} </left> </h1>
+        <h1 style="border:3px; border-style:outset; font-size:18px"><left> age:{{ user.age|title }} </left> </h1>
+       <h1 style="border:3px; border-style:outset; font-size:18px"><left> Records:{{ user.records|title }} </left> </h1>
+       <h1 style="border:3px; border-style:outset; font-size:18px"><left> warnings: {{ user.warnings|title }} </left> </h1>
+        <h1 style="border:3px; border-style:outset; font-size:18px"><left> Notes: {{ user.notes|title }} </left> </h1>
+        <h1  style="order:3px; border-style:outset; font-size:18px"><left> Staff since: {{ user.userSince|title }} </left> </h1>
+</div>
+
+<!-- 
 <div>
     <form action="/action_page">
       <div style="border:3px; border-style:solid" class="containerProfile">
@@ -95,6 +109,7 @@ input[type=text], input[type=number] {
           <img src = {{ user.image }} >
     
     </div>
+    -->
 
 
           <br>
