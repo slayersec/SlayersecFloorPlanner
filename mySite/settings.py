@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 USERNAME_FIELD = 'email'
 AUTH_USER_MODEL = "users.User" 
 #AUTHENTICATION_BACKENDS = ['utils.custom_authentication.CustomBackend', ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
