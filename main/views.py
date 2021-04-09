@@ -78,7 +78,7 @@ def displayProfile(request):
 @login_required
 def editProfile(request):
     if request.method == 'POST':
-        form = ProfileCustomizeForm(request.POST)
+        form = ProfileCustomizeForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()  # this will save Car info to database
             return HttpResponse('Data added to database')
