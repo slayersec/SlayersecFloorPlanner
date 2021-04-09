@@ -128,10 +128,19 @@ input[type=text], input[type=number] {
     <form action="/action_page">
     <div class="containerProfile">
         <h1><center> {{ user.name|title }} </center> </h1>
-        <h1><center> {{ user.address|title }}'s address' </center> </h1>
-        <h1><center> {{ user.role|title }}'s role' </center> </h1>
-        <h1><center> {{ user.position|title }}'s position' </center> </h1>
-        <h1><center> {{ user.name|title }}'s name again.' </center> </h1>
+        <h1><center> Your address is {{ user.address|body }} </center> </h1>
+        <h1><center> Your role is {{ user.role|body }} </center> </h1>
+        <h1><center> Your position is {{ user.position|body }} </center> </h1>
+        <h1><center> Phone{{ user.phone|body }} </center> </h1>
+        <h1><center> age{{ user.phone|body }} </center> </h1>
+        <h1><center> Records:{{ user.phone|body }} </center> </h1>
+        <h1><center> warnings: {{ user.phone|body }} </center> </h1>
+        <h1><center> Notes: {{ user.phone|body }} </center> </h1>
+        <h1><center> Staff since {{ user.userSince|body }} </center> </h1>
+
+
+
+
         <br>
           <!-- {% for user in users %} -->
          <label for="warning"><b>{{ user|title }}.</b></label>
