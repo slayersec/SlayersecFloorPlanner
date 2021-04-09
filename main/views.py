@@ -88,7 +88,8 @@ def editProfile(request):
 
 @login_required
 def imageUpload(request):
-   return render(request, "main/imageUpload.html", context={"formProfile":form})
+   return render(request, "main/imageUpload.html")
+
 
 @login_required
 def maps2D(request):
@@ -103,21 +104,16 @@ def maps2D(request):
        mapdata = mapdata(mapName='test', data='myImage.png')
        return redirect(saveGrid)
        
-   return render(request, "main/maps2D.html", context={"formMaps":form})
+   return render(request, "main/maps2D.html")
 
 @login_required
 def mapsView(request):
-   return render(request, "main/mapsView.html", context={"formMapsView":form})
+   return render(request, "main/mapsView.html")
 
 @login_required
 def checkcred(request):
-   return render(request, "main/checkcred.py", context={"formCheckCred":form})
-
-
-@login_required
-def saveGrid(request):
-   return render(request, "main/saveGrid.html", context={"saveGrid":form})
+   return render(request, "main/checkcred.py")
 
 @login_required
 def mapsList(request):
-   return render(request, "main/mapsList.html", context={"mapsList":form})
+   return render(request, "main/mapsList.html")
